@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="8" width="1393" height="1097" text="Browser&#xA;http://www.gigmanager.com/previousGigs?user=@User&#xA;" locked="true" measuredWidth="1393" measuredHeight="1097">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="3" x="1232" y="62" width="147" height="50" text="Notifications&#xA;" measuredWidth="147" measuredHeight="50">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="4" x="136" y="128" text="Previous gigs                                                                                              " measuredWidth="609" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="1160" y="62" text="[log out]" measuredWidth="64" measuredHeight="28">
+    <font/>
+    <items link="login.screen" x="0" y="3" width="58" height="20" text="log out"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="1040" y="62" text="[user settings]" measuredWidth="110" measuredHeight="28">
+    <font/>
+    <items link="editUser.screen" x="0" y="3" width="104" height="20" text="user settings"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="30" x="138" y="184" width="588" height="329" text="Date,Artist,Venue,Remove&#xA;2016-09-25,Taikes,[Sticky Fingers (Gothenburg - SE)],[X]&#xA;2016-09-27,Nirvana,[The Ballrom(Chicago - US)],[X]&#xA;2016-10-12,Placebo,[Zenith(Paris - FR)],[X]" measuredWidth="588" measuredHeight="329" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font/>
+    <items link="editVenue.screen" x="196" y="32" width="258" height="20" text="Sticky Fingers (Gothenburg - SE)"/>
+    <items x="488" y="32" width="11" height="20" text="X"/>
+    <items link="editVenue.screen" x="196" y="60" width="209" height="20" text="The Ballrom(Chicago - US)"/>
+    <items x="488" y="60" width="11" height="20" text="X"/>
+    <items link="editVenue.screen" x="196" y="88" width="138" height="20" text="Zenith(Paris - FR)"/>
+    <items x="488" y="88" width="11" height="20" text="X"/>
+  </widgets>
+  <widgets xsi:type="model:LinkBar" id="38" x="138" y="62" text="Look for Venues,My saved Venues,About GigManager" measuredWidth="470" measuredHeight="28">
+    <font/>
+    <items x="0" y="0" width="135" height="28" text="Look for Venues"/>
+    <items x="153" y="0" width="142" height="28" text="My saved Venues"/>
+    <items x="313" y="0" width="156" height="28" text="About GigManager"/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="54" x="1464" y="184" text="Delete Gig&#xA;Delete previous gig?&#xA;OK,Cancel" measuredWidth="254" measuredHeight="142" icon="warning (large)">
+    <items x="64" y="98" width="80" height="29" text="OK"/>
+    <items x="159" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="55" x="648" y="233" width="816" height="55" measuredWidth="816" measuredHeight="55" left="false" right="true"/>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

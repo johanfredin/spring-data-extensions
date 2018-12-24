@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8"/>
+    <title>VenueHub</title>
+</head>
+<body>
+
+<h1><a href="index.html" th:href="@{/index/member=*{member.id}}">VenueHub</a></h1>
+
+<div class="footer">
+    <!-- Banner links -->
+    <a href="savedVenues.html" th:href="@{/}">My Saved Venues</a> |
+    <a href="findVenues.html" th:href="@{/}">Find Venues</a> |
+    <a href="about.html" th:href="@{/}">About Gigmanager</a> |
+    <a href="editMember.html" th:href="@{/}">User Settings</a> |
+    <a href="login.html" th:href="@{/}">Log Out</a> |
+    Notifications
+</div>
+
+<div th:object="${member}">
+
+    <h2>Welcome <span th:text="*{userName}">user</span></h2>
+
+    <p>
+        <a class="button" href="editArtist.html" th:href="@{/editArtist/(member=${id})/artist=0}">Create Artist</a>
+    </p>
+
+    <div th:unless="*{artists.isEmpty()}">
+
+        <h4>My Artists</h4>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Name</th>
+                <th>Last Update</th>
+                <th>Members</th>
+                <th>Pending Requests</th>
+                <th>Upcoming Gigs</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="artist : *{artists}">
+                <td><a href="editArtist.html" th:href="@{/editArtist/(member=${id})/(artist=${artist.id})}"><span
+                        th:text="*{artist.name}">Artist name</span></a></td>
+                <td th:text="*{artist.getDisplayLastChangeDate()}">2016-09-25 08:35</td>
+                <td th:text="*{artist.members.size()}">3</td>
+                <td th:text="*{artist.requests.size()}">2</td>
+                <td th:text="*{artist.gigs.size()}">1</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Received messages -->
+    <div th:unless="*{receivedMessages.isEmpty()}">
+
+        <h4>Inbox</h4>
+
+        <table>
+            <tbody>
+            <tr th:each="message : *{receivedMessages}">
+                <td th:text="*{message.getSummary()}">I hate your band</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+    <!-- Sent messages -->
+    <div th:unless="*{sentMessages.isEmpty()}">
+
+        <h4>Sent messages</h4>
+
+        <table>
+            <tbody>
+            <tr th:each="message : *{sentMessages}">
+                <td th:text="*{message.getSummary()}">I hate you 2</td>
+            </tr>
+            </tbody>
+        </table>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

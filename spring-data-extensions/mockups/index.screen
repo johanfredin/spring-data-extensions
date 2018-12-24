@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="8" width="1393" height="1097" text="Browser&#xA;http://www.gigmanager.com/index?user=@User&#xA;" locked="true" measuredWidth="1393" measuredHeight="1097">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="45" x="71" y="224" width="601" height="333" measuredWidth="601" measuredHeight="333" verticalScrollbar="true"/>
+  <widgets xsi:type="model:Label" id="2" x="79" y="120" text="Welcome @User" measuredWidth="169" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="3" x="1232" y="62" width="147" height="50" text="Notifications&#xA;" measuredWidth="147" measuredHeight="50">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="4" x="79" y="160" text="My Artists" measuredWidth="108" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="11" x="1160" y="62" text="[log out]" measuredWidth="64" measuredHeight="28">
+    <font/>
+    <items link="login.screen" x="0" y="3" width="58" height="20" text="log out"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="12" x="1040" y="62" text="[user settings]" measuredWidth="110" measuredHeight="28">
+    <font/>
+    <items link="editUser.screen" x="0" y="3" width="104" height="20" text="user settings"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="26" x="720" y="162" text="Upcoming gigs" measuredWidth="155" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="30" x="720" y="226" width="633" height="329" text="Date,Artist,Venue,Edit/View,Remove&#xA;2016-09-25,Taikes,Sticky Fingers (Gothenburg - SE),[Edit],[X]&#xA;2016-09-27,Nirvana,The Ballrom(Chicago - US),[Edit],[X]&#xA;2016-10-12,Placebo,Zenith(Paris - FR),[Edit],[X]" measuredWidth="633" measuredHeight="329" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font/>
+    <items link="editGig.screen" x="451" y="32" width="33" height="20" text="Edit"/>
+    <items x="544" y="32" width="11" height="20" text="X"/>
+    <items link="editGig.screen" x="451" y="60" width="33" height="20" text="Edit"/>
+    <items x="544" y="60" width="11" height="20" text="X"/>
+    <items link="editGig.screen" x="451" y="88" width="33" height="20" text="Edit"/>
+    <items x="544" y="88" width="11" height="20" text="X"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="33" x="720" y="596" text="Pending requests" measuredWidth="180" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="34" x="720" y="648" width="633" height="329" text="Request sent,Artist,User,Venue,Edit,Remove&#xA;2016-09-25,Taikes,Johan,Sticky Fingers (Gothenburg - SE),[Edit], [X]&#xA;2016-09-27,Nirvana,Kurt,The Ballrom(Chicago - US),[Edit],[X]&#xA;2016-10-12,Placebo,Brian,Zenith(Paris - FR),[Edit],[X]" measuredWidth="633" measuredHeight="329" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font size="12px"/>
+    <items link="editPendingRequests.screen" x="527" y="32" width="33" height="20" text="Edit"/>
+    <items x="571" y="32" width="11" height="20" text="X"/>
+    <items link="editPendingRequests.screen" x="527" y="60" width="33" height="20" text="Edit"/>
+    <items x="571" y="60" width="11" height="20" text="X"/>
+    <items link="editPendingRequests.screen" x="527" y="88" width="33" height="20" text="Edit"/>
+    <items x="571" y="88" width="11" height="20" text="X"/>
+  </widgets>
+  <widgets xsi:type="model:LinkBar" id="38" x="79" y="62" text="Look for Venues,My saved Venues,About GigManager" measuredWidth="470" measuredHeight="28">
+    <font/>
+    <items link="editVenue.screen" x="0" y="0" width="135" height="28" text="Look for Venues"/>
+    <items link="savedVenues.screen" x="153" y="0" width="142" height="28" text="My saved Venues"/>
+    <items link="about.screen" x="313" y="0" width="156" height="28" text="About GigManager"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="40" x="1019" y="165" text="[Previous gigs]" measuredWidth="139" measuredHeight="33">
+    <font size="15px" underline="true"/>
+    <items link="previousGigs.screen" x="0" y="3" width="133" height="25" text="Previous gigs"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="44" x="922" y="595" text="Find venues" measuredWidth="140" measuredHeight="35" link="editVenue.screen">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="43" x="891" y="164" text="[Add Gig]" measuredWidth="100" measuredHeight="35" link="editGig.screen">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="5" x="97" y="236" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:Panel" id="6" x="280" y="236" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:Panel" id="7" x="464" y="236" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:Panel" id="8" x="97" y="397" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:Panel" id="9" x="280" y="397" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:Panel" id="10" x="464" y="397" width="177" height="155" measuredWidth="177" measuredHeight="155" link="editArtist.screen"/>
+  <widgets xsi:type="model:TextArea" id="14" x="303" y="315" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="13" x="112" y="315" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="15" x="485" y="305" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="16" x="112" y="466" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="17" x="303" y="466" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="18" x="485" y="466" width="140" height="65" text="Members: 2&#xA;Pending gigs: 3&#xA;Upcoming gigs: 1" measuredWidth="140" measuredHeight="65" state="disabled" alpha="114" borderColor="#ffffff">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="19" x="135" y="252" text="Taikes" measuredWidth="66" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="20" x="319" y="252" text="Melvins" measuredWidth="83" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="21" x="511" y="252" text="Nirvana" measuredWidth="82" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="22" x="135" y="413" text="Placebo" measuredWidth="84" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="23" x="319" y="413" text="Muse" measuredWidth="60" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="24" x="503" y="413" text="Foofi" measuredWidth="58" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="46" x="71" y="596" text="Venues nearby" measuredWidth="152" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="47" x="71" y="648" width="601" height="329" text="[Sticky Fingers],Gothenburg ,Sweden,Rock&#xA;[The Ballrom],Chicago,USA,Pop-Rock&#xA;[Zenith],Paris,France,Alternative" measuredWidth="601" measuredHeight="329" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false" header="false">
+    <font size="11px"/>
+    <items link="editVenue.screen" x="5" y="3" width="99" height="18" text="Sticky Fingers"/>
+    <items link="editVenue.screen" x="5" y="28" width="86" height="18" text="The Ballrom"/>
+    <items link="editVenue.screen" x="5" y="53" width="46" height="18" text="Zenith"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="49" x="200" y="159" text="Add Artist" measuredWidth="123" measuredHeight="35" link="editArtist.screen">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="50" x="1544" y="676" text="Delete pending request&#xA;Are you sure you want to delete pending request?&#xA;OK,Cancel" measuredWidth="492" measuredHeight="142" icon="warning (large)">
+    <items x="302" y="98" width="80" height="29" text="OK"/>
+    <items x="397" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="51" x="1544" y="256" text="Delete Gig&#xA;Are you sure you want to delete upcoming gig?&#xA;OK,Cancel" measuredWidth="468" measuredHeight="142" icon="warning (large)">
+    <items x="278" y="98" width="80" height="29" text="OK"/>
+    <items x="373" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="52" x="1280" y="272" width="265" height="61" measuredWidth="265" measuredHeight="61" left="false" right="true"/>
+  <widgets xsi:type="model:Arrow" id="53" x="1297" y="720" width="248" height="13" measuredWidth="248" measuredHeight="13" left="false" right="true"/>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

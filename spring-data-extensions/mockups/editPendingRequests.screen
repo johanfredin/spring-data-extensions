@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Group" id="149" x="40" y="1608" width="621" height="497" text="Edit contact" measuredWidth="621" measuredHeight="497" background="#999999">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Browser" id="1" x="8" width="1713" height="1569" text="Browser&#xA;http://www.gigmanager.com/editGig?user=@User&amp;band=@bandName&#xA;" locked="true" measuredWidth="1713" measuredHeight="1569">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="61" x="51" y="104" text="Edit Pending Request" measuredWidth="298" measuredHeight="42">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="66" x="1482" y="64" width="147" height="50" text="Notifications&#xA;" measuredWidth="147" measuredHeight="50">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="67" x="1402" y="62" text="[log out]" measuredWidth="64" measuredHeight="28">
+    <font/>
+    <items link="login.screen" x="0" y="3" width="58" height="20" text="log out"/>
+  </widgets>
+  <widgets xsi:type="model:Panel" id="204" x="40" y="160" width="1377" height="857" measuredWidth="1377" measuredHeight="857" background="#cccccc" verticalScrollbar="true" border="none"/>
+  <widgets xsi:type="model:Label" id="68" x="1296" y="62" text="[edit profile]" measuredWidth="99" measuredHeight="28">
+    <font/>
+    <items link="editUser.screen" x="0" y="3" width="93" height="20" text="edit profile"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="76" x="59" y="224" text="Name" measuredWidth="59" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="77" x="235" y="229" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="78" x="59" y="268" text="Email" measuredWidth="54" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="79" x="59" y="316" text="Phone nr" measuredWidth="87" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="80" x="59" y="364" text="Website" measuredWidth="81" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="83" x="59" y="176" text="Venue*                                                                                                                 " measuredWidth="645" measuredHeight="33" foreground="#38761d">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="84" x="226" y="224" width="454" text="Sticky Fingers" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="85" x="226" y="316" width="454" text="+46 761 25 25 1" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="86" x="235" y="333" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="87" x="226" y="364" width="454" text="http://www.stickyfingers.nu" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="90" x="226" y="270" width="454" text="info@sticky.com" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="59" y="412" text="Type of music" measuredWidth="131" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="98" x="226" y="412" width="295" text="Rock&#xA;" measuredWidth="295" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Map" id="113" x="760" y="204" width="631" height="248" measuredWidth="631" measuredHeight="248"/>
+  <widgets xsi:type="model:Label" id="118" x="59" y="532" text="Street" measuredWidth="63" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="119" x="235" y="537" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="120" x="59" y="576" text="ZipCode" measuredWidth="81" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="121" x="59" y="624" text="City" measuredWidth="41" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="122" x="59" y="672" text="State or Region" measuredWidth="148" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="123" x="59" y="484" text="Address                                                                                                            " measuredWidth="627" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="124" x="226" y="532" width="454" text="Kaserntorget 7" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="125" x="226" y="624" width="454" text="Göteborg" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="126" x="235" y="641" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="127" x="226" y="672" width="454" text="Västra Götaland" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="128" x="226" y="578" width="454" text="43141" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="129" x="59" y="720" text="Country" measuredWidth="78" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="131" x="226" y="720" width="454" text="Sweden" measuredWidth="454" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="137" x="59" y="779" text="Contacts                                                                                                           " measuredWidth="630" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="146" x="59" y="832" width="621" height="135" text="Name,Email,Phone,Role&#xA;Peter,peter@sticky.com,,booker&#xA;Karl,karl@sticky.com,1234567,bartender" measuredWidth="621" measuredHeight="135" alternative="#eeeeee">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="147" x="51" y="1496" text="Submit" measuredWidth="117" measuredHeight="44" link="index.screen">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="150" x="64" y="1712" width="57" text="Name" measuredWidth="57" measuredHeight="31" foreground="#ffffff">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="151" x="238" y="1677" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="152" x="64" y="1756" width="74" text="Email" measuredWidth="74" measuredHeight="31" foreground="#ffffff">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="153" x="64" y="1804" width="74" text="Phone" measuredWidth="74" measuredHeight="31" foreground="#ffffff">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="154" x="64" y="1852" width="96" text=" Role" measuredWidth="96" measuredHeight="31" foreground="#ffffff">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="155" x="240" y="1712" width="280" text="Peter" measuredWidth="280" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="156" x="240" y="1804" width="280" measuredWidth="280" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="157" x="238" y="1781" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="159" x="240" y="1758" width="280" text="peter@sticky.com" measuredWidth="280" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="162" x="64" y="1920" width="164" text="Submit" measuredWidth="164" measuredHeight="33">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="164" x="610" y="1628" text="X" measuredWidth="33" measuredHeight="33">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="165" x="824" y="1622" text="Delete contact&#xA;Are you sure you want to delete contact?&#xA;OK,Cancel" measuredWidth="418" measuredHeight="142" icon="warning (large)">
+    <items x="228" y="98" width="80" height="29" text="OK"/>
+    <items x="323" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="167" x="400" y="1763" width="448" height="166" measuredWidth="448" measuredHeight="166" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Label" id="172" x="400" y="108" text="Delete" measuredWidth="73" measuredHeight="33" foreground="#cc0000">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="173" x="1808" y="202" text="Delete Gig&#xA;Are you sure you want to delete Gig?&#xA;OK,Cancel" measuredWidth="385" measuredHeight="142" icon="warning (large)">
+    <items link="index.screen" x="195" y="98" width="80" height="29" text="OK"/>
+    <items x="290" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="174" x="480" y="128" width="1321" height="81" measuredWidth="1321" measuredHeight="81" left="false" right="true"/>
+  <widgets xsi:type="model:Combo" id="178" x="240" y="1852" width="280" text="Booker" measuredWidth="280" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="179" x="240" y="1920" text="Delete contact" measuredWidth="153" measuredHeight="33" foreground="#cc0000">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="180" x="192" y="1497" text="[Cancel]" measuredWidth="97" measuredHeight="42" link="index.screen">
+    <font size="20px" underline="true"/>
+    <items x="0" y="3" width="91" height="34" text="Cancel"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="205" x="1800" y="419" measuredWidth="6" measuredHeight="33" foreground="#6aa84f">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="206" x="760" y="484" text="Reviews                                                                                                            " measuredWidth="628" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="207" x="760" y="532" text="Score" measuredWidth="57" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="208" x="760" y="620" width="628" height="131" text="Not bad&#xA;&#xA;Nice staff, good deal and great backstage, we had a blast!" measuredWidth="628" measuredHeight="131" verticalScrollbar="true">
+    <font size="13px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Icon" id="210" x="824" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="211" x="864" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="212" x="904" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="213" x="944" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="214" x="984" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="215" x="1024" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="216" x="1064" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="217" x="1104" y="532" measuredWidth="32" measuredHeight="32" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="218" x="1144" y="532" measuredWidth="32" measuredHeight="32" foreground="#cccccc" icon="favorites (large)"/>
+  <widgets xsi:type="model:Icon" id="219" x="1192" y="532" measuredWidth="32" measuredHeight="32" foreground="#cccccc" icon="favorites (large)"/>
+  <widgets xsi:type="model:Label" id="220" x="760" y="578" width="216" text="By Taikes, 2015-09-22" measuredWidth="216" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="222" x="760" y="824" width="627" height="143" text="Artist,Genre,City,Country&#xA;Taikes,Grunge/Rock,Gothemburg,Sweden&#xA;Oasis,Pop-Rock,Manchester,UK" measuredWidth="627" measuredHeight="143" verticalScrollbar="true" alternative="#eeeeee">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="223" x="760" y="779" width="641" text="Artist who have performed at Sticky Fingers                                      " measuredWidth="641" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Text" id="226" x="1793" y="488" width="448" height="240" text="*When Venue label pressed, display the venue info" measuredWidth="448" measuredHeight="240" foreground="#38761d">
+    <font size="17px" bold="true"/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="231" x="180" y="1568" width="38" height="353" measuredWidth="38" measuredHeight="353" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Label" id="232" x="59" y="1072" text="Last update" measuredWidth="112" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:DateField" id="233" x="227" y="1074" width="142" text="2016/09/23" measuredWidth="142" measuredHeight="28"/>
+  <widgets xsi:type="model:Label" id="235" x="592" y="1072" text="By Johan" measuredWidth="88" measuredHeight="31" state="disabled">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="236" x="59" y="1120" text="Status" measuredWidth="63" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="237" x="227" y="1120" width="453" text="Request sent" measuredWidth="453" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="238" x="226" y="1168" width="454" height="129" text="Not bad&#xA;&#xA;Could be a good place for us" measuredWidth="454" measuredHeight="129" verticalScrollbar="true">
+    <font size="13px" bold="false"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="239" x="64" y="1168" text="Notes" measuredWidth="61" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

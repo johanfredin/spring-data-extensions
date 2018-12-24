@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="8" width="1401" height="1193" text="Browser&#xA;http://www.gigmanager.com/bandpage?user=@User&amp;band=@bandName&#xA;" locked="true" measuredWidth="1401" measuredHeight="1193">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="26" x="768" y="264" text="Upcoming gigs" measuredWidth="155" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="30" x="768" y="308" width="545" height="349" text="Date,Venue&#xA;2016-09-25,Sticky Fingers (Gothenburg - SE)&#xA;2016-09-27,The Ballrom(Chicago - US)&#xA;2016-10-12,Zenith(Paris - FR)," measuredWidth="545" measuredHeight="349" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="45" x="51" y="268" text="Name" measuredWidth="64" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="46" x="227" y="264" text="@Band name" measuredWidth="138" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="47" x="51" y="456" text="Bio" measuredWidth="39" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:TextArea" id="48" x="227" y="456" width="454" height="201" text="@Bandname is from Gothenburg, Sweden.&#xA;@Bandname is of @members size members.&#xA;@Bandname is bnlabla glurnde lorem iusssf &#xA;&#xA;Lots of succesas with bullshit and promo nad domo&#xA;Lots of succesas with bullshit and promo nad domo&#xA;Lots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domo&#xA;Lots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domoLots of succesas with bullshit and promo nad domo" measuredWidth="454" measuredHeight="201" verticalScrollbar="true">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="61" x="51" y="104" text="@BandName" measuredWidth="186" measuredHeight="42">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="62" x="51" y="196" text="About" measuredWidth="78" measuredHeight="37">
+    <font size="17px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="65" x="768" y="200" text="Status" measuredWidth="81" measuredHeight="37">
+    <font size="17px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="66" x="1224" y="64" width="147" height="50" text="Notifications&#xA;" measuredWidth="147" measuredHeight="50">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="67" x="1144" y="62" text="[log out]" measuredWidth="64" measuredHeight="28">
+    <font/>
+    <items link="login.screen" x="0" y="3" width="58" height="20" text="log out"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="68" x="1038" y="62" text="[edit profile]" measuredWidth="99" measuredHeight="28">
+    <font/>
+    <items link="editUser.screen" x="0" y="3" width="93" height="20" text="edit profile"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="69" x="51" y="308" text="Members" measuredWidth="99" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="73" x="225" y="320" width="454" height="101" text="[Johan]&#xA;[Alex]&#xA;[Oskar]" measuredWidth="454" measuredHeight="101" verticalScrollbar="true" rowHeight="20" horizontalLines="true" alternative="#eeeeee" verticalLines="false" header="false">
+    <font/>
+    <items link="editUser.screen" x="5" y="4" width="49" height="20" text="Johan"/>
+    <items link="editUser.screen" x="5" y="32" width="36" height="20" text="Alex"/>
+    <items link="editUser.screen" x="5" y="60" width="47" height="20" text="Oskar"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="76" x="60" y="728" text="Official website" measuredWidth="149" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="77" x="236" y="733" measuredWidth="3" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="78" x="60" y="772" text="youtube" measuredWidth="90" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="79" x="60" y="820" text="facebook" measuredWidth="90" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="80" x="60" y="868" text="spotify" measuredWidth="70" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="81" x="60" y="916" text="iTunes" measuredWidth="63" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="82" x="60" y="960" text="contact" measuredWidth="73" measuredHeight="31">
+    <font size="13px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="83" x="60" y="680" text="Links                                                                                                                 " measuredWidth="622" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="98" x="768" y="676" text="Previous gigs                                                                                " measuredWidth="539" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="99" x="768" y="720" width="545" height="271" text="Date,Venue&#xA;2016-09-25,Sticky Fingers (Gothenburg - SE)&#xA;2016-09-27,The Ballrom(Chicago - US)&#xA;2016-10-12,Zenith(Paris - FR)," measuredWidth="545" measuredHeight="271" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="100" x="225" y="727" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="101" x="227" y="772" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="102" x="227" y="819" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="103" x="225" y="867" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="104" x="225" y="912" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Link" id="105" x="225" y="959" text="http://www.@BandName.com" measuredWidth="300" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="106" x="179" y="1244" text="Just for viewing an other users Artist, uneditable content" measuredWidth="786" measuredHeight="42">
+    <font size="20px"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

@@ -1,0 +1,13 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+table {
+
+    border: 2px solid grey;
+
+}
+
+table.vertical {
+
+}

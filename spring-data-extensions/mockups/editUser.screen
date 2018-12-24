@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<model:Screen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:model="http://wireframesketcher.com/1.0/model.ecore">
+  <widgets xsi:type="model:Browser" id="1" x="8" width="1401" height="1193" text="Browser&#xA;http://www.gigmanager.com/editUser?user=@User&#xA;" locked="true" measuredWidth="1401" measuredHeight="1193">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="61" x="51" y="104" text="Edit User" measuredWidth="130" measuredHeight="42">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Note" id="66" x="1224" y="64" width="147" height="50" text="Notifications&#xA;" measuredWidth="147" measuredHeight="50">
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="67" x="1144" y="62" text="[log out]" measuredWidth="64" measuredHeight="28">
+    <font/>
+    <items link="index.screen" x="0" y="3" width="58" height="20" text="log out"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="68" x="208" y="108" text="Delete profile?" measuredWidth="153" measuredHeight="33" foreground="#cc0000">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="87" x="51" y="188" text="User name" measuredWidth="111" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="88" x="344" y="188" width="241" text="@User" measuredWidth="241" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="89" x="51" y="232" text="Email" measuredWidth="61" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:TextField" id="90" x="344" y="232" width="241" text="user@email.com" measuredWidth="241" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="91" x="51" y="368" text="[Change password?]" measuredWidth="191" measuredHeight="33" link="changePassword.screen">
+    <font size="15px"/>
+    <items x="0" y="3" width="185" height="25" text="Change password?"/>
+  </widgets>
+  <widgets xsi:type="model:Table" id="95" x="51" y="544" width="534" height="329" text="Name,Last activity,Remove&#xA;[Taikes],2016-09-25,[X]&#xA;[Nirvana],2016-09-27,[X]&#xA;[Placebo],2016-10-12,[X]" measuredWidth="534" measuredHeight="329" verticalScrollbar="true" horizontalLines="true" alternative="#eeeeee" verticalLines="false">
+    <font/>
+    <items link="editArtist.screen" x="5" y="32" width="50" height="20" text="Taikes"/>
+    <items x="355" y="32" width="11" height="20" text="X"/>
+    <items link="editArtist.screen" x="5" y="60" width="62" height="20" text="Nirvana"/>
+    <items x="355" y="60" width="11" height="20" text="X"/>
+    <items link="editArtist.screen" x="5" y="88" width="65" height="20" text="Placebo"/>
+    <items x="355" y="88" width="11" height="20" text="X"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="96" x="51" y="488" text="My Artists" measuredWidth="108" measuredHeight="33">
+    <font size="15px" underline="true"/>
+  </widgets>
+  <widgets xsi:type="model:Button" id="97" x="180" y="487" text="Add Artist" measuredWidth="123" measuredHeight="35">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="98" x="51" y="272" text="User role" measuredWidth="95" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Combo" id="99" x="344" y="275" width="241" text="Administrator&#xA;" measuredWidth="241" measuredHeight="33">
+    <font size="15px"/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="101" x="1456" y="512" text="Warning&#xA;Are you sure you want to delete @Artist?&#xA;OK,Cancel" measuredWidth="421" measuredHeight="142" icon="warning (large)">
+    <items x="231" y="98" width="80" height="29" text="OK"/>
+    <items x="326" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Alert" id="103" x="1456" y="304" text="Delete User&#xA;Are you sure you want to delete Your profile?&#xA;OK,Cancel" measuredWidth="456" measuredHeight="142" icon="warning (large)">
+    <items link="index.screen" x="266" y="98" width="80" height="29" text="OK"/>
+    <items x="361" y="98" width="80" height="29" text="Cancel"/>
+    <font/>
+  </widgets>
+  <widgets xsi:type="model:Arrow" id="104" x="424" y="560" width="1017" height="25" measuredWidth="1017" measuredHeight="25" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Arrow" id="105" x="432" y="584" width="1008" height="25" measuredWidth="1008" measuredHeight="25" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Arrow" id="106" x="432" y="608" width="1008" height="33" measuredWidth="1008" measuredHeight="33" left="false" right="true" direction="bottom"/>
+  <widgets xsi:type="model:Arrow" id="107" x="368" y="129" width="1081" height="192" measuredWidth="1081" measuredHeight="192" left="false" right="true"/>
+  <widgets xsi:type="model:Button" id="108" x="51" y="1080" text="Submit" measuredWidth="117" measuredHeight="44" link="index.screen">
+    <font size="20px"/>
+  </widgets>
+  <widgets xsi:type="model:Label" id="109" x="192" y="1081" text="[Cancel]" measuredWidth="97" measuredHeight="42" link="index.screen">
+    <font size="20px" underline="true"/>
+    <items x="0" y="3" width="91" height="34" text="Cancel"/>
+  </widgets>
+  <hRuler/>
+  <vRuler/>
+  <font size="12px"/>
+</model:Screen>

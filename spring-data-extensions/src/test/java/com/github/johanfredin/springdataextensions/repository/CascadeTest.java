@@ -1,6 +1,6 @@
 package com.github.johanfredin.springdataextensions.repository;
 
-public interface Cascadable {
+public interface CascadeTest {
 
     /**
      * Test to make sure references that are marked with Cascade.PERSIST gets persisted

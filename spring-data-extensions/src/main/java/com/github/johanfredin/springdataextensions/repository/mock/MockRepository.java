@@ -48,153 +48,59 @@ public abstract class MockRepository<ID extends Serializable, E extends Identifi
     }
 
     @Override
+    public <S extends E> S save(S entity) {
+        return (S) entities.put(nextId(), entity);
+    }
+
+    @Override
+    public <S extends E> Iterable<S> saveAll(Iterable<S> entities) {
+        return null;
+    }
+
+    @Override
+    public Optional<E> findById(ID id) {
+        return Optional.empty();
+    }
+
+    @Override
+    public boolean existsById(ID id) {
+        return false;
+    }
+
+    @Override
     public List<E> findAll() {
         return vals();
     }
 
     @Override
-    public List<E> findAll(Sort sort) {
-        return vals();
-    }
-
-    @Override
-    public List<E> findAllById(Iterable<ID> ids) {
+    public Iterable<E> findAllById(Iterable<ID> ids) {
         return null;
-    }
-
-    @Override
-    public <S extends E> List<S> saveAll(Iterable<S> entities) {
-        List<S> saves = new ArrayList<>();
-        for (S entity : entities) {
-            save(entity);
-        }
-        return saves;
-    }
-
-    @Override
-    public Optional<E> findById(ID Id) {
-        return Optional.of(entities.get(id));
-    }
-
-    @Override
-    public void flush() {
-    }
-
-    @SuppressWarnings("unchecked")
-    @Override
-    public <S extends E> S saveAndFlush(S entity) {
-        return (S) addOrUpdate(entity);
-    }
-
-    @Override
-    public void deleteInBatch(Iterable<E> entities) {
-    }
-
-    @Override
-    public void deleteAllInBatch() {
-        this.entities.clear();
-    }
-
-    @Override
-    public E getOne(ID id) {
-        return this.entities.get(id);
-    }
-
-    @Override
-    public <S extends E> Optional<S> findOne(Example<S> example) {
-        return Optional.empty();
-    }
-
-    @Override
-    public <S extends E> List<S> findAll(Example<S> example) {
-        return null;
-    }
-
-    @Override
-    public <S extends E> List<S> findAll(Example<S> example, Sort sort) {
-        return null;
-    }
-
-    @Override
-    public Page<E> findAll(Pageable pageable) {
-        return null;
-    }
-
-    @Override
-    public <S extends E> S save(S entity) {
-        return (S) addOrUpdate(entity);
-    }
-
-    @Override
-    public boolean existsById(ID id) {
-        return this.entities.containsKey(id);
     }
 
     @Override
     public long count() {
-        return this.entities.size();
+        return 0;
     }
 
     @Override
     public void deleteById(ID id) {
-        this.entities.remove(id);
+
     }
 
     @Override
     public void delete(E entity) {
-        this.entities.remove(entity.getId());
+
     }
 
     @Override
     public void deleteAll(Iterable<? extends E> entities) {
-        for (E entity : entities) {
-            this.entities.remove(entity.getId());
-        }
+
     }
 
     @Override
     public void deleteAll() {
-        this.entities.clear();
+
     }
 
-    @Override
-    public <S extends E> Page<S> findAll(Example<S> example, Pageable pageable) {
-        return null;
-    }
-
-    @Override
-    public <S extends E> long count(Example<S> example) {
-        return this.entities.size();
-    }
-
-    @Override
-    public <S extends E> boolean exists(Example<S> example) {
-        return false;
-    }
-
-    @Override
-    public Optional<E> findOne(Specification<E> spec) {
-        return null;
-    }
-
-    @Override
-    public List<E> findAll(Specification<E> spec) {
-        return null;
-    }
-
-    @Override
-    public Page<E> findAll(Specification<E> spec, Pageable pageable) {
-        return null;
-    }
-
-    @Override
-    public List<E> findAll(Specification<E> spec, Sort sort) {
-        return null;
-    }
-
-    @Override
-    public long count(Specification<E> spec) {
-        return this.entities.size();
-    }
 
 }

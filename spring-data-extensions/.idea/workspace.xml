@@ -2,127 +2,49 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6f7f671-d143-4dc8-9579-007cb00d5cae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadable.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Address.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/PersonRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/AddressService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/PersonService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/CopyableTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CrossReferenceTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mockups/editArtist.screen" beforeDir="false" afterPath="$PROJECT_DIR$/mockups/editArtist.screen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mockups/viewArtist.screen" beforeDir="false" afterPath="$PROJECT_DIR$/mockups/viewArtist.screen" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/ArtistRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Member.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/ContactPersonRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/EmailHolderRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/GigRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MemberRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/GigRequestRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/GigScheduleRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/GigSpecificsRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MessageRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/VenueRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/VenueRepository.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/VenueReviewRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/DeleteMemberRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/VenueSearchRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/jpa/AbstractJpaExtensionRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/jpa/JpaDeleteMemberRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/jpa/JpaVenueSeachRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/jpa/JpaVenueSeachRepository.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/custom/mock/MockDeleteMemberRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockArtistRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockGigRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockMemberRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MemberRepository.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockVenueRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockVenueReviewRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ArtistService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/GigService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MessageService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/VenueReviewService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/VenueSearchService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/VenueService.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/ArtistServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/GigServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MemberServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MessageServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/VenueReviewServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/VenueSearchServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/VenueServiceImpl.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/ExtError.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/MvcErrors.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/MvcUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/Page.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/RedirectEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/AddMembersForArtistBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/Bean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/EditArtistBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/EditArtistReviewsBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/EditMemberBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/EditVenueBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/EditVenueReviewsBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/FindVenuesBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/LoginMemberBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/RefreshBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/RegisterMemberBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/ResetMemberPasswordBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/bean/ResetPasswordBean.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AddMembersToArtistController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerBase.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerExtensions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditArtistController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditArtistReviewsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditMemberController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditVenueController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditVenueReviewsController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/FindVenuesController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/IndexController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/LoginController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/RegisterMemberController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ResetPasswordController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ViewController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MemberServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addMembersToArtist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/addMembersToArtist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editArtist.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editArtist.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editArtist2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/editArtist2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/addMembersToArtist.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jsp/addMembersToArtist.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editMember.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jsp/editMember.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/jsp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerMember.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/registerMember.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/AddressTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/ArtistTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/ContactPersonTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/EntityTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigRequestTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigScheduleTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigSpecificsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/MemberTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/MessageTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/ValidationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/VenueReviewTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/VenueTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/EmailHolderRepositoryTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaArtistRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaGigRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaMemberRepositoryIntegrationTest.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaVenueRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaVenueRepositoryIntegrationTest.java.orig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaVenueReviewRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/custom/JpaDeleteMemberRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/custom/JpaVenueSearchRepositoryIntegrationTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/MvcUtilsTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/StandaloneMvcTestViewResolver.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AbstractArtistControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AbstractControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AbstractMemberControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AbstractVenueControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/AddMembersToArtistControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditArtistControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditMemberControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditVenueControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/IndexControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/LoginControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/RegisterMemberControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ResetPasswordControllerTest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/mock/MockBindingResult.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/web/mvc/controller/mock/MockModel.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CascadeTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaMemberRepositoryIntegrationTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/application_test.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -134,10 +56,25 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="125" column="37" lean-forward="true" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+            <state relative-caret-position="533">
+              <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1506#1507#0" expanded="true" />
+                <element signature="e#1587#1588#0" expanded="true" />
+                <element signature="e#1621#1622#0" expanded="true" />
+                <element signature="e#1683#1684#0" expanded="true" />
+                <element signature="e#1716#1717#0" expanded="true" />
+                <element signature="e#1773#1774#0" expanded="true" />
+                <element signature="e#1806#1807#0" expanded="true" />
+                <element signature="e#1863#1864#0" expanded="true" />
+                <element signature="e#1906#1907#0" expanded="true" />
+                <element signature="e#1977#1978#0" expanded="true" />
+                <element signature="e#2019#2020#0" expanded="true" />
+                <element signature="e#2062#2063#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -145,8 +82,120 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+            <state relative-caret-position="100">
+              <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+              <folding>
+                <element signature="e#546#547#0" expanded="true" />
+                <element signature="e#601#602#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="135">
+              <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#301#302#0" expanded="true" />
+                <element signature="e#328#329#0" expanded="true" />
+                <element signature="e#591#592#0" expanded="true" />
+                <element signature="e#624#625#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Address.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="120">
+              <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#988#989#0" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1055#1056#0" expanded="true" />
+                <element signature="e#1085#1086#0" expanded="true" />
+                <element signature="e#1132#1133#0" expanded="true" />
+                <element signature="e#1170#1171#0" expanded="true" />
+                <element signature="e#1758#1759#0" expanded="true" />
+                <element signature="e#1802#1803#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/PersonServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+              <folding>
+                <element signature="e#634#635#0" expanded="true" />
+                <element signature="e#690#691#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="11" selection-start-column="11" selection-end-column="11" />
+              <folding>
+                <element signature="e#862#863#0" expanded="true" />
+                <element signature="e#906#907#0" expanded="true" />
+                <element signature="e#954#955#0" expanded="true" />
+                <element signature="e#1022#1023#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="278">
+              <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#346#347#0" expanded="true" />
+                <element signature="e#370#371#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -156,8 +205,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
+        <option value="JUnit4 Test Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -166,10 +216,20 @@
       <find>long</find>
       <find>Long</find>
       <find>AbstractEntity</find>
+      <find>F</find>
+      <find>aLong</find>
+      <find>public</find>
+      <find>S</find>
+      <find>protected</find>
     </findStrings>
     <replaceStrings>
       <replace>ID</replace>
       <replace>Identifiable</replace>
+      <replace>R</replace>
+      <replace>id</replace>
+      <replace>protected</replace>
+      <replace>E</replace>
+      <replace>public</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -180,27 +240,42 @@
       <list>
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifieable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CrossReferenceHolder.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/AbstractEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Member.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MemberRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MemberServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" />
         <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadeable.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadable.java" />
-        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CascadeTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CrossReferenceTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaMemberRepositoryIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/MemberRepositoryIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/CopyableTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Member.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/PersonRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/AddressService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/AddressServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java" />
+        <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Address.java" />
       </list>
     </option>
   </component>
@@ -338,6 +413,13 @@
               <item name="spring-data-extensions" type="b2602c69:ProjectViewProjectNode" />
               <item name="spring-data-extensions" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="spring-data-extensions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-data-extensions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -364,6 +446,13 @@
               <item name="springdataextensions" type="462c0819:PsiDirectoryNode" />
               <item name="repository" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="spring-data-extensions" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-data-extensions" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -374,11 +463,20 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545731358999" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1545768317439" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.github.johanfredin.springdataextensions.domain" />
+    </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.github.johanfredin.springdataextensions.domain" />
     </key>
@@ -395,7 +493,49 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.VenuehubApplication">
+  <component name="RunManager" selected="JUnit.com.github.johanfredin.springdataextensions.repository in extensions">
+    <configuration name="AddressRepositoryIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="extensions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.johanfredin.springdataextensions.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.johanfredin.springdataextensions.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.johanfredin.springdataextensions.repository.AddressRepositoryIntegrationTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonRepositoryIntegrationTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="extensions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.johanfredin.springdataextensions.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.johanfredin.springdataextensions.repository" />
+      <option name="MAIN_CLASS_NAME" value="com.github.johanfredin.springdataextensions.repository.PersonRepositoryIntegrationTest" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="com.github.johanfredin.springdataextensions.repository in extensions" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="extensions" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.github.johanfredin.springdataextensions.repository.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.github.johanfredin.springdataextensions.repository" />
+      <option name="TEST_OBJECT" value="package" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="VenuehubApplication (1)" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="extensions" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.github.johanfredin.springdataextensions.VenuehubApplication" />
@@ -410,6 +550,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.com.github.johanfredin.springdataextensions.repository in extensions" />
+        <item itemvalue="JUnit.AddressRepositoryIntegrationTest" />
+        <item itemvalue="JUnit.PersonRepositoryIntegrationTest" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -419,18 +566,51 @@
       <option name="presentableId" value="Default" />
       <updated>1545684890937</updated>
       <workItem from="1545684892321" duration="3051000" />
-      <workItem from="1545727799578" duration="2605000" />
+      <workItem from="1545727799578" duration="3973000" />
+      <workItem from="1545732766335" duration="12473000" />
     </task>
     <servers />
   </component>
+  <component name="TestHistory">
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 14h 52m 59s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 15h 51m 36s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 15h 53m 03s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 15h 59m 09s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 16h 01m 52s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="PersonRepositoryIntegrationTest - 2018.12.25 at 16h 07m 27s.xml">
+      <configuration name="PersonRepositoryIntegrationTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_github_johanfredin_springdataextensions_repository_in_extensions - 2018.12.25 at 16h 15m 03s.xml">
+      <configuration name="com.github.johanfredin.springdataextensions.repository in extensions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_github_johanfredin_springdataextensions_repository_in_extensions - 2018.12.25 at 20h 57m 50s.xml">
+      <configuration name="com.github.johanfredin.springdataextensions.repository in extensions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_github_johanfredin_springdataextensions_repository_in_extensions - 2018.12.25 at 21h 00m 36s.xml">
+      <configuration name="com.github.johanfredin.springdataextensions.repository in extensions" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="com_github_johanfredin_springdataextensions_repository_in_extensions - 2018.12.25 at 21h 02m 05s.xml">
+      <configuration name="com.github.johanfredin.springdataextensions.repository in extensions" configurationId="JUnit" />
+    </history-entry>
+  </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5656000" />
+    <option name="totallyTimeSpent" value="19497000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1366" height="766" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25377643" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25755286" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -438,10 +618,11 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" weight="0.32973805" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -468,114 +649,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/LocationHolder.java" />
-    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/lang/Number.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="7" lean-forward="true" selection-start-line="12" selection-start-column="7" selection-end-line="12" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/AbstractEntity.java" />
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="39" selection-start-line="10" selection-start-column="39" selection-end-line="10" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="26" selection-start-line="26" selection-end-line="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Member.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" column="39" selection-start-line="17" selection-start-column="39" selection-end-line="17" selection-end-column="39" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#538#539#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.3.RELEASE/spring-data-jpa-2.1.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="35" column="17" selection-start-line="35" selection-start-column="17" selection-end-line="35" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="10" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="27" column="29" lean-forward="true" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="29" />
-          <folding>
-            <element signature="e#1166#1167#0" expanded="true" />
-            <element signature="e#1230#1231#0" expanded="true" />
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1620#1621#0" expanded="true" />
-            <element signature="e#1649#1650#0" expanded="true" />
-            <element signature="e#1704#1705#0" expanded="true" />
-            <element signature="e#1733#1734#0" expanded="true" />
-            <element signature="e#1799#1800#0" expanded="true" />
-            <element signature="e#1826#1827#0" expanded="true" />
-            <element signature="e#2105#2106#0" expanded="true" />
-            <element signature="e#2157#2158#0" expanded="true" />
-            <element signature="e#2306#2307#0" expanded="true" />
-            <element signature="e#2352#2353#0" expanded="true" />
-            <element signature="e#2479#2480#0" expanded="true" />
-            <element signature="e#2516#2517#0" expanded="true" />
-            <element signature="e#2560#2561#0" expanded="true" />
-            <element signature="e#2604#2605#0" expanded="true" />
-            <element signature="e#2686#2687#0" expanded="true" />
-            <element signature="e#2725#2726#0" expanded="true" />
-            <element signature="e#2803#2804#0" expanded="true" />
-            <element signature="e#2830#2831#0" expanded="true" />
-            <element signature="e#2919#2920#0" expanded="true" />
-            <element signature="e#2946#2947#0" expanded="true" />
-            <element signature="e#3009#3010#0" expanded="true" />
-            <element signature="e#3036#3037#0" expanded="true" />
-            <element signature="e#3095#3096#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3195#3196#0" expanded="true" />
-            <element signature="e#3247#3248#0" expanded="true" />
-            <element signature="e#3288#3289#0" expanded="true" />
-            <element signature="e#3331#3332#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="4" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
@@ -587,94 +660,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
           <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="16" column="17" selection-start-line="16" selection-start-column="17" selection-end-line="16" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="84" column="9" selection-start-line="84" selection-start-column="9" selection-end-line="84" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MemberRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#1142#1143#0" expanded="true" />
-            <element signature="e#1193#1194#0" expanded="true" />
-            <element signature="e#1959#1960#0" expanded="true" />
-            <element signature="e#2018#2019#0" expanded="true" />
-            <element signature="e#2068#2069#0" expanded="true" />
-            <element signature="e#2124#2125#0" expanded="true" />
-            <element signature="e#2202#2203#0" expanded="true" />
-            <element signature="e#2254#2255#0" expanded="true" />
-            <element signature="e#2292#2293#0" expanded="true" />
-            <element signature="e#2341#2342#0" expanded="true" />
-            <element signature="e#2378#2379#0" expanded="true" />
-            <element signature="e#2426#2427#0" expanded="true" />
-            <element signature="e#2481#2482#0" expanded="true" />
-            <element signature="e#2536#2537#0" expanded="true" />
-            <element signature="e#2590#2591#0" expanded="true" />
-            <element signature="e#2646#2647#0" expanded="true" />
-            <element signature="e#2692#2693#0" expanded="true" />
-            <element signature="e#2744#2745#0" expanded="true" />
-            <element signature="e#2778#2779#0" expanded="true" />
-            <element signature="e#2824#2825#0" expanded="true" />
-            <element signature="e#2861#2862#0" expanded="true" />
-            <element signature="e#2907#2908#0" expanded="true" />
-            <element signature="e#2966#2967#0" expanded="true" />
-            <element signature="e#3017#3018#0" expanded="true" />
-            <element signature="e#3024#3054#0" expanded="true" />
-            <element signature="e#3094#3095#0" expanded="true" />
-            <element signature="e#3141#3142#0" expanded="true" />
-            <element signature="e#3197#3198#0" expanded="true" />
-            <element signature="e#3252#3253#0" expanded="true" />
-            <element signature="e#3293#3294#0" expanded="true" />
-            <element signature="e#3346#3347#0" expanded="true" />
-            <element signature="e#3374#3375#0" expanded="true" />
-            <element signature="e#3420#3421#0" expanded="true" />
-            <element signature="e#3448#3449#0" expanded="true" />
-            <element signature="e#3487#3488#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/MemberServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-          <folding>
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-            <element signature="e#548#549#0" expanded="true" />
-            <element signature="e#584#585#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -703,62 +688,14 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/RedirectEntity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" lean-forward="true" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/Page.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/MvcUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1111">
-          <caret line="31" column="72" selection-start-line="31" selection-start-column="72" selection-end-line="31" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/ExtError.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="22" selection-start-line="13" selection-start-column="22" selection-end-line="13" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerExtensions.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-136">
-          <caret line="26" column="72" selection-start-line="26" selection-start-column="72" selection-end-line="26" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditArtistController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1185">
-          <caret line="108" column="25" lean-forward="true" selection-start-line="108" selection-start-column="25" selection-end-line="108" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-511">
-          <caret line="30" column="29" selection-start-line="30" selection-start-column="29" selection-end-line="30" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/RedirectEntity.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/Page.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/MvcUtils.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/ExtError.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerBase.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerExtensions.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/EditArtistController.java" />
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/GigTest.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CrossReferenceHolder.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="330">
@@ -769,52 +706,355 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/custom/JpaDeleteMemberRepositoryIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/custom/JpaDeleteMemberRepositoryIntegrationTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/PersonRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="34" column="7" lean-forward="true" selection-start-line="34" selection-start-column="7" selection-end-line="34" selection-end-column="7" />
+        <state relative-caret-position="60">
+          <caret line="4" column="69" selection-start-line="4" selection-start-column="69" selection-end-line="4" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/Repository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="33" column="17" selection-start-line="33" selection-start-column="17" selection-end-line="33" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/lang/Iterable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="41" column="17" selection-start-line="41" selection-start-column="17" selection-end-line="41" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/Collection.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="220" column="42" lean-forward="true" selection-start-line="220" selection-start-column="42" selection-end-line="220" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="207">
+          <caret line="137" column="39" selection-start-line="137" selection-start-column="39" selection-end-line="137" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/PagingAndSortingRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="31" column="17" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.3.RELEASE/spring-data-jpa-2.1.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/support/SimpleJpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="233" column="121" lean-forward="true" selection-start-line="233" selection-start-column="121" selection-end-line="233" selection-end-column="121" />
+          <folding>
+            <element signature="e#4761#4762#0" expanded="true" />
+            <element signature="e#4806#4807#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.3.RELEASE/spring-data-jpa-2.1.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/support/JpaRepositoryImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="28" column="29" selection-start-line="28" selection-start-column="29" selection-end-line="28" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-jpa/2.1.3.RELEASE/spring-data-jpa-2.1.3.RELEASE-sources.jar!/org/springframework/data/jpa/repository/JpaRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="35" column="23" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CascadeTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="28" selection-start-line="2" selection-start-column="28" selection-end-line="2" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/Optional.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="747">
+          <caret line="148" column="9" lean-forward="true" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="44" selection-start-line="11" selection-start-column="44" selection-end-line="11" selection-end-column="44" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/PropertyValidator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="345">
-          <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+        <state relative-caret-position="60">
+          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/CopyableTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="1" lean-forward="true" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="4" lean-forward="true" selection-start-line="8" selection-start-column="4" selection-end-line="8" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="449">
+          <caret line="37" column="38" selection-start-line="37" selection-start-column="38" selection-end-line="37" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+            <element signature="e#1069#1070#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="18" column="17" selection-start-line="18" selection-start-column="17" selection-end-line="18" selection-end-column="17" />
+          <folding>
+            <element signature="e#818#819#0" expanded="true" />
+            <element signature="e#874#875#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="38" column="21" selection-start-line="38" selection-start-column="21" selection-end-line="38" selection-end-column="21" />
+          <folding>
+            <element signature="e#1114#1115#0" expanded="true" />
+            <element signature="e#1166#1167#0" expanded="true" />
+            <element signature="e#1230#1231#0" expanded="true" />
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1624#1625#0" expanded="true" />
+            <element signature="e#1651#1652#0" expanded="true" />
+            <element signature="e#1735#1736#0" expanded="true" />
+            <element signature="e#1762#1763#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="true" />
+            <element signature="e#1857#1858#0" expanded="true" />
+            <element signature="e#1911#1912#0" expanded="true" />
+            <element signature="e#1939#1940#0" expanded="true" />
+            <element signature="e#1620#1621#0" expanded="true" />
+            <element signature="e#1649#1650#0" expanded="true" />
+            <element signature="e#2084#2085#0" expanded="true" />
+            <element signature="e#2111#2112#0" expanded="true" />
+            <element signature="e#2152#2153#0" expanded="true" />
+            <element signature="e#2176#2177#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/PersonService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/AddressService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="46" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="20" column="17" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/AddressServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="4" selection-start-line="6" selection-start-column="4" selection-end-line="6" selection-end-column="4" />
+          <folding>
+            <element signature="e#644#645#0" expanded="true" />
+            <element signature="e#702#703#0" expanded="true" />
+            <element signature="e#343#344#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/CrossReferenceTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" lean-forward="true" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/junit/junit/4.12/junit-4.12-sources.jar!/org/junit/internal/runners/model/ReflectiveCallable.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-start-column="11" selection-end-column="11" />
+          <folding>
+            <element signature="e#862#863#0" expanded="true" />
+            <element signature="e#906#907#0" expanded="true" />
+            <element signature="e#954#955#0" expanded="true" />
+            <element signature="e#1022#1023#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/PersonServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
+          <folding>
+            <element signature="e#634#635#0" expanded="true" />
+            <element signature="e#690#691#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="28" column="39" selection-start-line="28" selection-start-column="39" selection-end-line="28" selection-end-column="39" />
+        <state relative-caret-position="278">
+          <caret line="45" column="17" lean-forward="true" selection-start-line="45" selection-start-column="17" selection-end-line="45" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#346#347#0" expanded="true" />
+            <element signature="e#370#371#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/JpaMemberRepositoryIntegrationTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="533">
+          <caret line="83" column="37" lean-forward="true" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1506#1507#0" expanded="true" />
+            <element signature="e#1587#1588#0" expanded="true" />
+            <element signature="e#1621#1622#0" expanded="true" />
+            <element signature="e#1683#1684#0" expanded="true" />
+            <element signature="e#1716#1717#0" expanded="true" />
+            <element signature="e#1773#1774#0" expanded="true" />
+            <element signature="e#1806#1807#0" expanded="true" />
+            <element signature="e#1863#1864#0" expanded="true" />
+            <element signature="e#1906#1907#0" expanded="true" />
+            <element signature="e#1977#1978#0" expanded="true" />
+            <element signature="e#2019#2020#0" expanded="true" />
+            <element signature="e#2062#2063#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="19" lean-forward="true" selection-start-line="9" selection-start-column="19" selection-end-line="9" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#301#302#0" expanded="true" />
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#591#592#0" expanded="true" />
+            <element signature="e#624#625#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="68" selection-start-line="4" selection-start-column="68" selection-end-line="4" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#988#989#0" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1055#1056#0" expanded="true" />
+            <element signature="e#1085#1086#0" expanded="true" />
+            <element signature="e#1132#1133#0" expanded="true" />
+            <element signature="e#1170#1171#0" expanded="true" />
+            <element signature="e#1758#1759#0" expanded="true" />
+            <element signature="e#1802#1803#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/Cascadable.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Address.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="29" lean-forward="true" selection-start-line="11" selection-start-column="29" selection-end-line="11" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AbstractJpaRepositoryTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="125" column="37" lean-forward="true" selection-start-line="125" selection-start-column="37" selection-end-line="125" selection-end-column="37" />
+        <state relative-caret-position="270">
+          <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="37" column="23" lean-forward="true" selection-start-line="37" selection-start-column="23" selection-end-line="37" selection-end-column="23" />
+        <state relative-caret-position="100">
+          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
+          <folding>
+            <element signature="e#546#547#0" expanded="true" />
+            <element signature="e#601#602#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

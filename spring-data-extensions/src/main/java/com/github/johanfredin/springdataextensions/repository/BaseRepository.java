@@ -3,9 +3,11 @@ package com.github.johanfredin.springdataextensions.repository;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -14,13 +16,26 @@ import java.util.List;
  * @author johan
  */
 @NoRepositoryBean
-public interface BaseRepository<ID extends Serializable, E extends Identifiable<ID>> extends JpaRepository<E, ID>, JpaSpecificationExecutor<E> {
+public interface BaseRepository<ID extends Serializable, E extends Identifiable<ID>> extends CrudRepository<E, ID> {
 
     default List<E> save(E... entities) {
-        return save(entities);
+        return saveAll(modifiableList(entities));
     }
 
     default void delete(E... entities) {
-        delete(entities);
+        deleteAll(modifiableList(entities));
+    }
+
+    default List<E> saveAll(List<E> entities) {
+        entities.forEach(this::save);
+        return entities;
+    }
+
+    default List<E> modifiableList(E... entities) {
+        return modifiableList(List.of(entities));
+    }
+
+    default List<E> modifiableList(List<E> list) {
+        return new ArrayList<>(list);
     }
 }

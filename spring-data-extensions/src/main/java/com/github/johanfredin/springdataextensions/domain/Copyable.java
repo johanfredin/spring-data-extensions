@@ -1,16 +1,22 @@
 package com.github.johanfredin.springdataextensions.domain;
 
+import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
 public interface Copyable<ID extends Serializable, E extends Identifiable<ID>> {
 
     /**
-     * Intended to be used for copying the jarfields from the populatedEntity
-     * Default method does the following:<br>
-     * Copies the id of the passed in entity<br>
-     *
-     * @param populatedEntity      the {@link AbstractEntity} with the data
+     * Populates our entity with the data of the passed in entity.
+     * What fields and references to populate from must be decided in the implementation.
+     * @param populatedEntity the entity with data we want to copy (must not be null!)
      */
-    E createCopy(E populatedEntity);
+    void copyFrom(@NotNull E populatedEntity);
+
+    /**
+     * Creates a new instance and assigns it all fields and references we want
+     *
+     * @return a new instance populated with the data the owning entity already possess.
+     */
+    E createCopy();
 
 }

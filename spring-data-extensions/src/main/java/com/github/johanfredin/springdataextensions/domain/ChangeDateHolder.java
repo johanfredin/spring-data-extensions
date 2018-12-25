@@ -34,6 +34,10 @@ public interface ChangeDateHolder {
         return getLastChangeDate().substring(0, getLastChangeDate().lastIndexOf(':'));
     }
 
+    default void setNewDate() {
+        setLastChangeDate(getNewDate());
+    }
+
     /**
      * @return A new date with format "yyyy-MM-dd HH:mm:ss"
      */

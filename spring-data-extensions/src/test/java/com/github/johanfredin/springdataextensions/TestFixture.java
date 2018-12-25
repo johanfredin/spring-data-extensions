@@ -1,46 +1,66 @@
 package com.github.johanfredin.springdataextensions;
 
-import com.github.johanfredin.springdataextensions.domain.Member;
-import com.pocstage.venuehub.constants.*;
-import com.pocstage.venuehub.domain.*;
+import com.github.johanfredin.springdataextensions.domain.Address;
+import com.github.johanfredin.springdataextensions.domain.Person;
+import org.junit.Ignore;
 
-import java.util.ArrayList;
-import java.util.List;
-
+@Ignore
 public class TestFixture {
 
-    // -----------------------------------------------------------------------------------------------------------------------
-    // ------------------------------ MEMBER ---------------------------------------------------------------------------------
-    // -----------------------------------------------------------------------------------------------------------------------
-
-    public static Member getValidMember() {
-        return getValidMember(FAKE_USERNAME, FAKE_PASSWORD, FAKE_NAME);
+    public static Person getValidPersonWithoutReference() {
+        return getValidPersonWithoutReference("Donald");
     }
 
-    public static Member getValidMember(String userName, String password, String realName) {
-        return new Member(userName, getFakeMail(userName), password, realName, FAKE_CITY, FAKE_COUNTRY, FAKE_ROLE, getValidArtists(), getValidSentMessages(), getValidReceivedMessages());
+    public static Person getValidPersonWithReference(boolean updateReferences) {
+        return getValidPersonWithReference("Donald", getValidAddressWithoutReference(), updateReferences);
     }
 
-    public static Member getValidMember(String userName, String password, String realName, String artist1Name, String artist2Name) {
-        return new Member(userName, getFakeMail(userName), password, realName, FAKE_CITY, FAKE_COUNTRY, FAKE_ROLE, getValidArtists(artist1Name, artist2Name), getValidSentMessages(), getValidReceivedMessages());
+    public static Person getValidPersonWithoutReference(String name) {
+        Person p = new Person();
+        p.setNewDate();
+        p.setName("Donald");
+        return p;
     }
 
-    public static Member getValidMemberWithoutReferences(String userName, String password, String realName) {
-        return new Member(userName, getFakeMail(userName), password, realName, FAKE_CITY, FAKE_COUNTRY, FAKE_ROLE);
+    public static Person getValidPersonWithReference(String name, Address address, boolean updateCrossReferences) {
+        Person p = new Person();
+        p.setNewDate();
+        p.setName("Donald");
+        p.setAddress(address);
+        if(updateCrossReferences) {
+            p.setCrossRelations();
+        }
+        return p;
     }
 
-    public static List<Member> getValidMembers() {
-        List<Member> members = new ArrayList<Member>();
-        members.add(getValidMember());
-        members.add(getValidMember("johanfredin", "@$$h0Lie", "Alex Hedling"));
-        return members;
+    public static Address getValidAddressWithoutReference() {
+        return getValidAddressWithoutReference("Street 1", "Zip code 1", "City 1", "Country 1");
     }
 
-    public static List<Member> getValidMembersWithoutReferences() {
-        List<Member> members = new ArrayList<Member>();
-        members.add(getValidMemberWithoutReferences(FAKE_USERNAME, FAKE_PASSWORD, FAKE_NAME));
-        members.add(getValidMemberWithoutReferences("johanfredin", "@$$h0Lie", "Alex Hedling"));
-        return members;
+    public static Address getValidAddressWithoutReference(String street, String zipCode, String city, String country) {
+        Address a = new Address();
+        a.setStreet(street);
+        a.setZipCode(zipCode);
+        a.setCity(city);
+        a.setCountry(country);
+        return a;
+    }
+
+    public static Address getValidAddressWithReference(boolean updateCrossReference) {
+        return getValidAddressWithReference("Street 1", "Zip code 1", "City 1", "Country 1", getValidPersonWithoutReference(), updateCrossReference);
+    }
+
+    public static Address getValidAddressWithReference(String street, String zipCode, String city, String country, Person person, boolean updateCrossReference) {
+        Address a = new Address();
+        a.setStreet(street);
+        a.setZipCode(zipCode);
+        a.setCity(city);
+        a.setCountry(country);
+        a.setPerson(person);
+        if(updateCrossReference) {
+            a.setCrossRelations();
+        }
+        return a;
     }
 
 

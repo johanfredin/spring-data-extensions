@@ -1,52 +1,64 @@
 package com.github.johanfredin.springdataextensions.domain;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.Map;
 
-public interface CollectionHolder<E extends Identifiable> {
+/**
+ * Useful for domain objects that holds one or several {@link javax.persistence.OneToMany}
+ * references in the form of collections.
+ */
+public interface CollectionHolder {
 
-    List<E> getCollection();
+    <E> Map<String, Collection<E>> getReferences();
 
-    void setCollection(List<E> collection);
-
-    default boolean hasData() {
-        return getCollection() != null && !getCollection().isEmpty();
+    default boolean hasData(String key) {
+        return get(key) != null && !get(key).isEmpty();
     }
 
-    default E addIfNotExists(E entity) {
-        if (!isAlive()) {
-            setCollection(new ArrayList<>());
+    default <E> Collection<E> get(String key) {
+        return this.<E>getReferences().get(key);
+    }
+
+    default <E>Collection<E> put(String key, Collection<E> value) {
+        return this.<E>getReferences().put(key, value);
+    }
+
+    default <E> E addIfNotExists(String key, E entity) {
+        if (!isAlive(key)) {
+            put(key, new ArrayList<>());
         }
-        if (!getCollection().contains(entity)) {
-            getCollection().add(entity);
+        if (!get(key).contains(entity)) {
+            get(key).add(entity);
         }
         return entity;
     }
 
-    default void deleteEntity(E entity) {
-        if (isAlive()) {
-            getCollection().remove(entity);
+    default <E> void deleteEntity(String key, E entity) {
+        if (isAlive(key)) {
+            get(key).remove(entity);
         }
     }
 
-    default List<E> addAll(List<E> entities) {
-        entities.forEach(this::addIfNotExists);
+    default <E> Collection<E> addAll(String key, Collection<E> entities) {
+        entities.forEach(e -> addIfNotExists(key, entities));
         return entities;
     }
 
-    default void deleteAll(List<E> entities) {
-        if(isAlive()) {
-            getCollection().removeAll(entities);
+    default <E> void deleteAll(String key, List<E> entities) {
+        if(isAlive(key)) {
+            get(key).removeAll(entities);
         }
     }
 
-    default void deleteAll() {
-        if(isAlive()) {
-            getCollection().clear();
+    default void deleteAll(String key) {
+        if(isAlive(key)) {
+            get(key).clear();
         }
     }
 
-    default boolean isAlive() {
-        return getCollection() != null;
+    default boolean isAlive(String key) {
+        return get(key) != null;
     }
 }

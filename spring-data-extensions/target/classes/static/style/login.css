@@ -1,0 +1,19 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1.center {
+    margin-left: 41%;
+    margin-top: 10%;
+}
+
+div.center {
+
+    padding: 5%;
+    border: 2px solid grey;
+    margin-left: 35%;
+    margin-right: 35%;
+    margin-top: 2%;
+    margin-bottom: 10%;
+    line-height: 35px;
+}

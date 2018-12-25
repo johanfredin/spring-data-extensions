@@ -16,7 +16,7 @@ public class Constants {
     public static final String CLASS_GIG_REQUEST = ENTITY_PATH + ".GigRequest";
     public static final String CLASS_GIG_SCHEDULE = ENTITY_PATH + ".GigSchedule";
     public static final String CLASS_GIG_SPECIFICS = ENTITY_PATH + ".GigSpecifics";
-    public static final String CLASS_MEMBER = ENTITY_PATH + ".Member";
+    public static final String CLASS_MEMBER = ENTITY_PATH + ".Person";
     public static final String CLASS_ADDRESS = ENTITY_PATH + ".Address";
     public static final String CLASS_CONTACTPERSON = ENTITY_PATH + ".ContactPerson";
     public static final String CLASS_VENUE = ENTITY_PATH + ".Venue";
@@ -31,16 +31,16 @@ public class Constants {
     public static final String REPOSITORY_GIG_REQUEST = "GigRequestRepository";
     public static final String REPOSITORY_GIG_SCHEDULE = "GigScheduleRepository";
     public static final String REPOSITORY_GIG_SPECIFICS = "GigSpecificsRepository";
-    public static final String REPOSITORY_MEMBER = "MemberRepository";
+    public static final String REPOSITORY_MEMBER = "PersonRepository";
     public static final String REPOSITORY_VENUE = "VenueRepository";
     public static final String REPOSITORY_VENUE_REVIEW = "VenueReviewRepository";
 
 
     // Message summary templates
-    public static final String MSG_OFFER_MEMBERSHIP_ARTIST = "Member {m} wants to make you a member of Artist {a}";
-    public static final String MSG_REQUEST_MEMBERSHIP_ARTIST = "Member {m} wishes to become a Member of {a}";
-    public static final String MSG_APPROVE_MEMBERSHIP_ARTIST = "Member {m} granted you membeship of artist {a}";
-    public static final String MSG_DENY_MEMBERSHIP_ARTIST = "Member {m} denied you membeship of artist {a}";
+    public static final String MSG_OFFER_MEMBERSHIP_ARTIST = "Person {m} wants to make you a member of Artist {a}";
+    public static final String MSG_REQUEST_MEMBERSHIP_ARTIST = "Person {m} wishes to become a Person of {a}";
+    public static final String MSG_APPROVE_MEMBERSHIP_ARTIST = "Person {m} granted you membeship of artist {a}";
+    public static final String MSG_DENY_MEMBERSHIP_ARTIST = "Person {m} denied you membeship of artist {a}";
 
     /**
      * Default latitude value (Cobain memorial)

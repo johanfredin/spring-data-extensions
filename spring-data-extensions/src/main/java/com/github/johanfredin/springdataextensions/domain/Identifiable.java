@@ -6,7 +6,7 @@ public interface Identifiable<ID extends Serializable> {
 
     ID getId();
 
-    boolean isExistingEntity();
-
     void setId(ID id);
+
+    boolean isExistingEntity();
 }

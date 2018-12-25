@@ -1,5 +1,6 @@
 package com.github.johanfredin.springdataextensions.repository;
 
+import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.junit.Test;
@@ -10,9 +11,9 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Sort;
 import org.springframework.data.domain.Sort.Direction;
-import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -33,8 +34,7 @@ import static org.junit.Assert.*;
 @RunWith(SpringRunner.class)
 @DataJpaTest
 @SpringBootTest
-@TestPropertySource(locations = "classpath:application_test.properties")
-public abstract class AbstractJpaRepositoryTest<E extends AbstractEntity, G extends BaseRepository<E>> {
+public abstract class AbstractJpaRepositoryTest<ID extends Serializable, E extends Identifiable<ID>, R extends BaseRepository<ID, E>> {
 
     protected Logger log = LogManager.getLogger(this.getClass());
 
@@ -136,7 +136,7 @@ public abstract class AbstractJpaRepositoryTest<E extends AbstractEntity, G exte
         save(e1, e2);
 
         // Try the ascending order
-        Page<E> sortedEntitiesAsc = getRepository().findAll(new PageRequest(0, 1, new Sort(Direction.ASC, "creationDate")));
+        Page<E> sortedEntitiesAsc = getRepository().findAll(PageRequest.of(0, 1, new Sort(Direction.ASC, "creationDate")));
         assertEquals("First entry's date, ascending order should be " + date1, date1, sortedEntitiesAsc.getContent().get(0).getCreationDate());
         assertEquals("List size should be 1", 1, sortedEntitiesAsc.getSize());
     }
@@ -181,15 +181,15 @@ public abstract class AbstractJpaRepositoryTest<E extends AbstractEntity, G exte
     /**
      * Subclasses must return the repository to use
      */
-    protected abstract G getRepository();
+    protected abstract R getRepository();
 
     /**
-     * Sublcasses must return a valid {@link AbstractEntity} to save.
+     * Sublcasses must return a valid {@link Identifiable} to save.
      */
     protected abstract E getEntity1();
 
     /**
-     * Sublclasses must return a second valid {@link AbstractEntity}. Should be different from
+     * Sublclasses must return a second valid {@link Identifiable}. Should be different from
      * {@link #getEntity1()}.
      */
     protected abstract E getEntity2();
@@ -212,25 +212,5 @@ public abstract class AbstractJpaRepositoryTest<E extends AbstractEntity, G exte
      */
     protected abstract E getFullyPopulatedPersistedEntity(boolean biDirectional);
 
-    /**
-     * Test to make sure references that are marked with Cascade.PERSIST gets persisted
-     * when owning entity is persisted
-     */
-    @Test
-    public abstract void testCascadePersist();
-
-    /**
-     * Test to make sure references that are marked with Cascade.MERGE gets merged
-     * when owning entity is merged
-     */
-    @Test
-    public abstract void testCascadeMerge();
-
-    /**
-     * Test to make sure references that are marked with Cascade.DELETE gets deleted
-     * when owning entity is deleted
-     */
-    @Test
-    public abstract void testCascadeDelete();
 
 }

@@ -111,7 +111,7 @@ public class Constants {
     public static final byte UNLIMITED = -1;
 
     /**
-     * Fetch collections ordered by {@link AbstractEntity#getLastChangeDate()}
+     * Fetch collections ordered by {@link com.github.johanfredin.springdataextensions.domain.ChangeDateHolder#getLastChangeDate()}
      */
     public static final String ORDER_BY_DATE = "LAST_UPDATE desc";
 

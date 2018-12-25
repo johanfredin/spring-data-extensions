@@ -1,6 +1,7 @@
 package com.github.johanfredin.springdataextensions.util;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.Collection;
@@ -14,7 +15,6 @@ import java.util.Iterator;
 public class RepositoryUtil {
 
     public static final byte DEFAULT_PAGE_RESULTS = 10;
-    public static final byte DEFAULT_LARGE_RESULTS = 100;
     public static final byte DEFAULT_PAGE = 0;
 
     /**
@@ -29,7 +29,7 @@ public class RepositoryUtil {
      * @return the first 10 results at given page
      */
     public static PageRequest getFirstTen(int page) {
-        return new PageRequest(page, DEFAULT_PAGE_RESULTS);
+        return PageRequest.of(page, DEFAULT_PAGE_RESULTS);
     }
 
     /**
@@ -115,7 +115,7 @@ public class RepositoryUtil {
     public static String getByteArgsAsString(byte... args) {
         StringBuilder sb = new StringBuilder();
         for (byte b = 0; b < args.length; b++) {
-            sb.append(Byte.toString(b));
+            sb.append(b);
         }
         return sb.toString();
     }
@@ -132,18 +132,16 @@ public class RepositoryUtil {
      * Utility method for getting a string representation of identifiers in a collection.
      * Useful in the toString() methods to quickly spot child entities etc.
      *
-     * @param entities the collection of {@link IdHolder} instances we want to see the ids of
+     * @param entities the collection of {@link com.github.johanfredin.springdataextensions.domain.Identifiable} instances we want to see the ids of
      * @return a String representation as [1,2,3] of the ids for passed in entities or [] if entities are empty or NULL when null
      */
     @JsonIgnore
-    public static String getIdsForEntity(Collection<? extends AbstractEntity> entities) {
+    public static String getIdsForEntity(Collection<? extends Identifiable> entities) {
         if (entities != null) {
             StringBuilder sb = new StringBuilder();
             sb.append('[');
             int i = 0;
-            Iterator<? extends AbstractEntity> iterator = entities.iterator();
-            while (iterator.hasNext()) {
-                AbstractEntity entity = iterator.next();
+            for (Identifiable entity : entities) {
                 sb.append(entity.getId());
                 if (i < entities.size() - 1) {
                     sb.append(',');

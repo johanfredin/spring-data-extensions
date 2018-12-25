@@ -1,5 +1,6 @@
 package com.github.johanfredin.springdataextensions.repository.mock;
 
+import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
 import org.springframework.data.domain.Example;
 import org.springframework.data.domain.Page;
@@ -8,6 +9,7 @@ import org.springframework.data.domain.Sort;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.repository.NoRepositoryBean;
 
+import java.io.Serializable;
 import java.util.*;
 
 /**
@@ -15,29 +17,26 @@ import java.util.*;
  * to services in controllers or just plain service tests. The mock repository saves data
  * in a {@link HashMap} instead of persisting it in a database. All methods are the same otherwise
  *
- * @param <E> any class extending  {@link AbstractEntity}
  * @author johan
  */
 @NoRepositoryBean
-public abstract class MockRepository<E extends AbstractEntity> implements BaseRepository<E> {
+public abstract class MockRepository<ID extends Serializable, E extends Identifiable<ID>> implements BaseRepository<ID, E> {
 
-    protected Map<Long, E> entities;
+    protected Map<ID, E> entities;
     private long id;
 
     public MockRepository() {
-        this.entities = new HashMap<Long, E>();
+        this.entities = new HashMap<ID, E>();
     }
 
-    private long nextId() {
-        return ++id;
-    }
+    public abstract ID nextId();
 
     private List<E> vals() {
         return new ArrayList<>(entities.values());
     }
 
     private E addOrUpdate(E entity) {
-        long id = 0L;
+        ID id = null;
         if (entity.isExistingEntity()) {
             id = entity.getId();
         } else {
@@ -59,7 +58,7 @@ public abstract class MockRepository<E extends AbstractEntity> implements BaseRe
     }
 
     @Override
-    public List<E> findAllById(Iterable<Long> ids) {
+    public List<E> findAllById(Iterable<ID> ids) {
         return null;
     }
 
@@ -73,7 +72,7 @@ public abstract class MockRepository<E extends AbstractEntity> implements BaseRe
     }
 
     @Override
-    public Optional<E> findById(Long Id) {
+    public Optional<E> findById(ID Id) {
         return Optional.of(entities.get(id));
     }
 
@@ -97,7 +96,7 @@ public abstract class MockRepository<E extends AbstractEntity> implements BaseRe
     }
 
     @Override
-    public E getOne(Long id) {
+    public E getOne(ID id) {
         return this.entities.get(id);
     }
 
@@ -127,7 +126,7 @@ public abstract class MockRepository<E extends AbstractEntity> implements BaseRe
     }
 
     @Override
-    public boolean existsById(Long id) {
+    public boolean existsById(ID id) {
         return this.entities.containsKey(id);
     }
 
@@ -137,7 +136,7 @@ public abstract class MockRepository<E extends AbstractEntity> implements BaseRe
     }
 
     @Override
-    public void deleteById(Long id) {
+    public void deleteById(ID id) {
         this.entities.remove(id);
     }
 

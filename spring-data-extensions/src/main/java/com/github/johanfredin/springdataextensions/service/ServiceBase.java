@@ -1,10 +1,13 @@
 package com.github.johanfredin.springdataextensions.service;
 
+import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
+import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
 
+import java.io.Serializable;
 import java.util.Arrays;
 import java.util.List;
 
@@ -13,11 +16,11 @@ import java.util.List;
  * Much like the {@link BaseRepository} interface. All methods here are by default
  * sent to a corresponding {@link BaseRepository} implementation class.
  *
- * @param <E> Any JPA entity extending {@link AbstractEntity}
+ * @param <E> Any JPA entity extending {@link Identifiable}
  * @param <F> Any class extending {@link BaseRepository}
  * @author johan
  */
-public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<E>> {
+public interface ServiceBase<ID extends Serializable, E extends Identifiable<ID>, F extends BaseRepository<ID, E>> {
 
     /**
      * Get the repository implementation
@@ -25,13 +28,6 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
      * @return
      */
     F getRepository();
-
-    /**
-     * Set the repository to use
-     *
-     * @param repository any class extending {@link BaseRepository}
-     */
-    void setRepository(F repository);
 
     default E save(E entity) {
         return getRepository().save(entity);
@@ -42,15 +38,14 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
      * Will update the entitys change date if so
      *
      * @param entity
-     * @return a call to {@link #save(AbstractEntity)} with an updated change date
+     * @return a call to {@link #save(Identifiable)} with an updated change date
      */
     default E save(E entity, boolean updateLastCangeDate) {
-        if (updateLastCangeDate) {
-            if (entity != null) {
-                if (entity.isExistingEntity()) {
-                    entity.updateLastChangeDate();
-                }
-            }
+        if (entity != null && 
+                entity instanceof ChangeDateHolder &&
+                updateLastCangeDate &&
+                entity.isExistingEntity()) {
+            ((ChangeDateHolder) entity).updateLastChangeDate();
         }
         return save(entity);
     }
@@ -68,7 +63,7 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
         return save(Arrays.asList(entities));
     }
 
-    default E findOne(long id) {
+    default E findOne(ID id) {
         return getRepository().getOne(id);
     }
 
@@ -76,7 +71,7 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
         return getRepository().findAll();
     }
 
-    default List<E> findAllById(Iterable<Long> ids) {
+    default List<E> findAllById(Iterable<ID> ids) {
         return getRepository().findAllById(ids);
     }
 
@@ -88,7 +83,7 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
         return getRepository().findAll(sort);
     }
 
-    default void delete(long id) {
+    default void delete(ID id) {
         getRepository().deleteById(id);
     }
 
@@ -109,7 +104,7 @@ public interface ServiceBase<E extends AbstractEntity, F extends BaseRepository<
         getRepository().deleteInBatch(entities);
     }
 
-    default boolean existsById(long id) {
+    default boolean existsById(ID id) {
         return getRepository().existsById(id);
     }
 

@@ -1,5 +1,6 @@
 package com.github.johanfredin.springdataextensions.util.comparator;
 
+import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 import org.springframework.stereotype.Component;
 
 import java.util.Comparator;
@@ -14,7 +15,7 @@ import java.util.Comparator;
 public class DateComparatorImpl implements DateComparator {
 
     @Override
-    public int compare(AbstractEntity o1, AbstractEntity o2) {
+    public int compare(ChangeDateHolder o1, ChangeDateHolder o2) {
         try {
 
             String d1 = o1.getLastChangeDate();

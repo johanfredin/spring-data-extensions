@@ -103,11 +103,13 @@ public abstract class BaseRepositoryTest<ID extends Serializable, E extends Iden
         List<E> entities = persistEntity1And2();
         E e1 = entities.get(0);
         E e2 = entities.get(1);
+
+        List<E> allById = (List<E>) getRepository().findAllById(List.of(e1.getId()));
         assertEquals("findAllById() with id=" + e1.getId() + " should result in 1 match of type=" + entityName(),
                 1,
-                List.of(getRepository().findAllById(List.of(e1.getId()))).size());
+                allById.size());
 
-        List<E> allById = (List<E>) getRepository().findAllById(List.of(e1.getId(), e2.getId()));
+        allById = (List<E>) getRepository().findAllById(List.of(e1.getId(), e2.getId()));
         assertEquals("findAllById() with ids=" + RepositoryUtil.getIdsForEntity(entities) +
                         " should result in 2 matches of type=" + entityName(),
                 2, allById.size());

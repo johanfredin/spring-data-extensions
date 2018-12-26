@@ -1,8 +1,6 @@
 package com.github.johanfredin.springdataextensions.repository;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
-import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
@@ -11,7 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Abstract superclass for all repositories used, extends Spring Data interfaces {@link JpaRepository} and {@link JpaSpecificationExecutor}
+ * Abstract superclass for all repositories used, extends Spring Data interfaces
  *
  * @author johan
  */

@@ -20,10 +20,10 @@ import java.util.*;
  * @author johan
  */
 @NoRepositoryBean
-public abstract class MockRepository<ID extends Serializable, E extends Identifiable<ID>> implements BaseRepository<ID, E> {
+public  class MockRepository<ID extends Serializable> implements BaseRepository<ID, Identifiable<ID>> {
 
-    protected Map<ID, E> entities;
-    private long id;
+    protected <S extends Identifiable<ID>> Map<ID, S> entities;
+    private ID id;
 
     public MockRepository() {
         this.entities = new HashMap<ID, E>();
@@ -47,18 +47,19 @@ public abstract class MockRepository<ID extends Serializable, E extends Identifi
         return entity;
     }
 
-    @Override
-    public <S extends E> S save(S entity) {
-        return (S) entities.put(nextId(), entity);
-    }
 
     @Override
-    public <S extends E> Iterable<S> saveAll(Iterable<S> entities) {
+    public <S extends Identifiable<ID>> S save(S entity) {
         return null;
     }
 
     @Override
-    public Optional<E> findById(ID id) {
+    public <S extends Identifiable<ID>> Iterable<S> saveAll(Iterable<S> entities) {
+        return null;
+    }
+
+    @Override
+    public Optional<Identifiable<ID>> findById(ID id) {
         return Optional.empty();
     }
 
@@ -68,12 +69,12 @@ public abstract class MockRepository<ID extends Serializable, E extends Identifi
     }
 
     @Override
-    public List<E> findAll() {
-        return vals();
+    public Iterable<Identifiable<ID>> findAll() {
+        return null;
     }
 
     @Override
-    public Iterable<E> findAllById(Iterable<ID> ids) {
+    public Iterable<Identifiable<ID>> findAllById(Iterable<ID> ids) {
         return null;
     }
 
@@ -88,12 +89,12 @@ public abstract class MockRepository<ID extends Serializable, E extends Identifi
     }
 
     @Override
-    public void delete(E entity) {
+    public void delete(Identifiable<ID> entity) {
 
     }
 
     @Override
-    public void deleteAll(Iterable<? extends E> entities) {
+    public void deleteAll(Iterable<? extends Identifiable<ID>> entities) {
 
     }
 
@@ -102,5 +103,28 @@ public abstract class MockRepository<ID extends Serializable, E extends Identifi
 
     }
 
+    @Override
+    public List<Identifiable<ID>> save(Identifiable<ID>... entities) {
+        return null;
+    }
 
+    @Override
+    public void delete(Identifiable<ID>... entities) {
+
+    }
+
+    @Override
+    public List<Identifiable<ID>> saveAll(List<Identifiable<ID>> entities) {
+        return null;
+    }
+
+    @Override
+    public List<Identifiable<ID>> modifiableList(Identifiable<ID>... entities) {
+        return null;
+    }
+
+    @Override
+    public List<Identifiable<ID>> modifiableList(List<Identifiable<ID>> list) {
+        return null;
+    }
 }

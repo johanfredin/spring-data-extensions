@@ -64,8 +64,8 @@ public interface ServiceBase<ID extends Serializable, E extends Identifiable<ID>
         return getRepository().findAll();
     }
 
-    default Iterable<E> findAllById(Iterable<ID> longs) {
-        return getRepository().findAllById(longs);
+    default Iterable<E> findAllById(Iterable<ID> ids) {
+        return getRepository().findAllById(ids);
     }
 
     default long count() {
@@ -80,7 +80,7 @@ public interface ServiceBase<ID extends Serializable, E extends Identifiable<ID>
         getRepository().delete(entity);
     }
 
-    default void deleteAll(Iterable<? extends E> entities) {
+    default void deleteAll(Iterable<E> entities) {
         getRepository().deleteAll(entities);
     }
 

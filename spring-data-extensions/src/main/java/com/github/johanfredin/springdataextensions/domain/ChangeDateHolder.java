@@ -44,4 +44,20 @@ public interface ChangeDateHolder {
     default String getNewDate() {
         return new DateTime().toString(DateTimeFormat.forPattern("yyy-MM-dd HH:mm:ss"));
     }
+
+    /**
+     * The pattern we will used for a date, "<b>yyyy-MM-dd</b>"
+     */
+    String REGEX_DATE_PATTERN = "\\d\\d\\d\\d-\\d\\d-\\d\\d";
+
+    /**
+     * The pattern we will used for all the time variables, "<b>HH:mm</b>"
+     */
+    String REGEX_TIME_PATTERN = "(\\d\\d:\\d\\d|| )";
+
+    /**
+     * The regex date that will be persisted (CREATION_DATE, LAST_UPDATE)
+     */
+    String REGEX_DATE_TIME_PATTERN = REGEX_DATE_PATTERN + " " + REGEX_TIME_PATTERN + ":\\d\\d";
+
 }

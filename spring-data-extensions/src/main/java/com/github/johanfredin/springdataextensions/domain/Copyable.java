@@ -3,7 +3,7 @@ package com.github.johanfredin.springdataextensions.domain;
 import javax.validation.constraints.NotNull;
 import java.io.Serializable;
 
-public interface Copyable<ID extends Serializable, E extends Identifiable<ID>> {
+public interface Copyable<ID, E extends Identifiable<ID>> {
 
     /**
      * Populates our entity with the data of the passed in entity.

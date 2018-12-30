@@ -10,7 +10,6 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.io.Serializable;
 import java.util.List;
 
 import static org.junit.Assert.assertFalse;
@@ -28,17 +27,17 @@ import static org.junit.Assert.assertTrue;
  */
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public abstract class BaseRepositoryTest<ID extends Serializable, E extends Identifiable<ID>, R extends BaseRepository<ID, E>> {
+public abstract class BaseRepositoryTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> {
 
     public Logger log = LogManager.getLogger(this.getClass());
 
     public abstract R getRepository();
 
-    public abstract E getEntity1();
+    public abstract T getEntity1();
 
-    public abstract E getEntity2();
+    public abstract T getEntity2();
 
-    public List<E> getEntities() {
+    public List<T> getEntities() {
         return getRepository().modifiableList(getEntity1(), getEntity2());
     }
 
@@ -46,15 +45,15 @@ public abstract class BaseRepositoryTest<ID extends Serializable, E extends Iden
         return getEntity1().getClass().getSimpleName();
     }
 
-    public E persistEntity1() {
+    public T persistEntity1() {
         return getRepository().save(getEntity1());
     }
 
-    public E persistEntity2() {
+    public T persistEntity2() {
         return getRepository().save(getEntity2());
     }
 
-    public List<E> persistEntity1And2() {
+    public List<T> persistEntity1And2() {
         return getRepository().save(getEntity1(), getEntity2());
     }
 
@@ -78,18 +77,18 @@ public abstract class BaseRepositoryTest<ID extends Serializable, E extends Iden
 
     @Test
     public void testFindById() {
-        E e = getEntity1();
-        assertFalse("Entity of type=" + entityName() + " should not be an existing entity", e.isExistingEntity());
-        getRepository().save(e);
-        assertTrue("Entity of type=" + entityName() + " should be an existing entity", e.isExistingEntity());
-        E eInDB = getRepository().findById(e.getId()).get();
-        assertEquals("Entity of type=" + entityName() + " found in db should match the persisted entity", eInDB, e);
+        T t = getEntity1();
+        assertFalse("Entity of type=" + entityName() + " should not be an existing entity", t.isExistingEntity());
+        getRepository().save(t);
+        assertTrue("Entity of type=" + entityName() + " should be an existing entity", t.isExistingEntity());
+        T tInDB = getRepository().findById(t.getId()).get();
+        assertEquals("Entity of type=" + entityName() + " found in db should match the persisted entity", tInDB, t);
     }
 
     @Test
     public void testExistsById() {
-        E e = persistEntity1();
-        assertTrue("Entity of type=" + entityName() + " exists by id=" + e.getId(), getRepository().existsById(e.getId()));
+        T t = persistEntity1();
+        assertTrue("Entity of type=" + entityName() + " exists by id=" + t.getId(), getRepository().existsById(t.getId()));
     }
 
     @Test
@@ -100,16 +99,16 @@ public abstract class BaseRepositoryTest<ID extends Serializable, E extends Iden
 
     @Test
     public void testFindAllById() {
-        List<E> entities = persistEntity1And2();
-        E e1 = entities.get(0);
-        E e2 = entities.get(1);
+        List<T> entities = persistEntity1And2();
+        T t1 = entities.get(0);
+        T t2 = entities.get(1);
 
-        List<E> allById = (List<E>) getRepository().findAllById(List.of(e1.getId()));
-        assertEquals("findAllById() with id=" + e1.getId() + " should result in 1 match of type=" + entityName(),
+        List<T> allById = (List<T>) getRepository().findAllById(List.of(t1.getId()));
+        assertEquals("findAllById() with id=" + t1.getId() + " should result in 1 match of type=" + entityName(),
                 1,
                 allById.size());
 
-        allById = (List<E>) getRepository().findAllById(List.of(e1.getId(), e2.getId()));
+        allById = (List<T>) getRepository().findAllById(List.of(t1.getId(), t2.getId()));
         assertEquals("findAllById() with ids=" + RepositoryUtil.getIdsForEntity(entities) +
                         " should result in 2 matches of type=" + entityName(),
                 2, allById.size());
@@ -123,32 +122,32 @@ public abstract class BaseRepositoryTest<ID extends Serializable, E extends Iden
 
     @Test
     public void testDeleteById() {
-        List<E> entities = persistEntity1And2();
+        List<T> entities = persistEntity1And2();
         assertEquals("There should be two entities of type=" + entityName() + " in DB", 2, getRepository().count());
-        E e1 = entities.get(0);
-        E e2 = entities.get(1);
-        getRepository().deleteById(e1.getId());
-        assertEquals("After deleting e1 there should be 1 entity left of type=" + entityName(), 1, getRepository().count());
+        T t1 = entities.get(0);
+        T t2 = entities.get(1);
+        getRepository().deleteById(t1.getId());
+        assertEquals("After deleting t1 there should be 1 entity left of type=" + entityName(), 1, getRepository().count());
     }
 
     @Test
     public void testDelete() {
-        List<E> entities = persistEntity1And2();
+        List<T> entities = persistEntity1And2();
         assertEquals("There should be two entities of type=" + entityName() + " in DB", 2, getRepository().count());
-        E e1 = entities.get(0);
-        E e2 = entities.get(1);
-        getRepository().delete(e1);
-        assertEquals("After deleting e1 there should be 1 entity left of type=" + entityName(), 1, getRepository().count());
+        T t1 = entities.get(0);
+        T t2 = entities.get(1);
+        getRepository().delete(t1);
+        assertEquals("After deleting t1 there should be 1 entity left of type=" + entityName(), 1, getRepository().count());
     }
 
     @Test
     public void testDeleteAllIterable() {
-        List<E> entities = persistEntity1And2();
+        List<T> entities = persistEntity1And2();
         assertEquals("There should be two entities of type=" + entityName() + " in DB", 2, getRepository().count());
-        E e1 = entities.get(0);
-        E e2 = entities.get(1);
-        getRepository().deleteAll(List.of(e1, e2));
-        assertEquals("After deleting e1 there should be 0 entities left of type=" + entityName(), 0, getRepository().count());
+        T t1 = entities.get(0);
+        T t2 = entities.get(1);
+        getRepository().deleteAll(List.of(t1, t2));
+        assertEquals("After deleting t1 there should be 0 entities left of type=" + entityName(), 0, getRepository().count());
     }
 
     @Test

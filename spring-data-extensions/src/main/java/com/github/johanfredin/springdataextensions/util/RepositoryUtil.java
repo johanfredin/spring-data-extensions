@@ -5,7 +5,6 @@ import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.domain.PageRequest;
 
 import java.util.Collection;
-import java.util.Iterator;
 
 /**
  * Helper methods for parameters etc using in repository
@@ -21,14 +20,14 @@ public class RepositoryUtil {
      * @return the first 10 results in the first page
      */
     public static PageRequest getFirstTen() {
-        return getFirstTen(DEFAULT_PAGE);
+        return getTenFromPage(DEFAULT_PAGE);
     }
 
     /**
      * @param page the page to fetch
      * @return the first 10 results at given page
      */
-    public static PageRequest getFirstTen(int page) {
+    public static PageRequest getTenFromPage(int page) {
         return PageRequest.of(page, DEFAULT_PAGE_RESULTS);
     }
 

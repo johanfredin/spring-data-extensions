@@ -4,7 +4,6 @@ import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -14,26 +13,26 @@ import java.util.List;
  * @author johan
  */
 @NoRepositoryBean
-public interface BaseRepository<ID extends Serializable, E extends Identifiable<ID>> extends CrudRepository<E, ID> {
+public interface BaseRepository<ID, T extends Identifiable<ID>> extends CrudRepository<T, ID> {
 
-    default List<E> save(E... entities) {
+    default List<T> save(T... entities) {
         return saveAll(modifiableList(entities));
     }
 
-    default void delete(E... entities) {
+    default void delete(T... entities) {
         deleteAll(modifiableList(entities));
     }
 
-    default List<E> saveAll(List<E> entities) {
+    default List<T> saveAll(List<T> entities) {
         entities.forEach(this::save);
         return entities;
     }
 
-    default List<E> modifiableList(E... entities) {
+    default List<T> modifiableList(T... entities) {
         return modifiableList(List.of(entities));
     }
 
-    default List<E> modifiableList(List<E> list) {
+    default List<T> modifiableList(List<T> list) {
         return new ArrayList<>(list);
     }
 }

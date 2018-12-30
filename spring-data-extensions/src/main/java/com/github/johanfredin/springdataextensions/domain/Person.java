@@ -1,7 +1,5 @@
 package com.github.johanfredin.springdataextensions.domain;
 
-import com.github.johanfredin.springdataextensions.constants.Constants;
-
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 
@@ -12,7 +10,7 @@ public class Person implements Identifiable<Long>, Copyable<Long, Person>, Chang
     @GeneratedValue(strategy = GenerationType.AUTO)
     private long id;
 
-    @Pattern(regexp = Constants.REGEX_DATE_TIME_PATTERN)
+    @Pattern(regexp = REGEX_DATE_TIME_PATTERN)
     private String lastChangeDate;
 
     private String name;

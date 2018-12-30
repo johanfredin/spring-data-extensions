@@ -2,15 +2,10 @@ package com.github.johanfredin.springdataextensions.repository.mock;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
-import org.springframework.data.domain.Example;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.data.domain.Sort;
-import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import java.io.Serializable;
 import java.util.*;
+import java.util.stream.Collectors;
 
 /**
  * Mock implementation of {@link BaseRepository}. Useful in testing repositories connected
@@ -20,22 +15,17 @@ import java.util.*;
  * @author johan
  */
 @NoRepositoryBean
-public  class MockRepository<ID extends Serializable> implements BaseRepository<ID, Identifiable<ID>> {
+public abstract class MockRepository<ID, T extends Identifiable<ID>> implements BaseRepository<ID, T> {
 
-    protected <S extends Identifiable<ID>> Map<ID, S> entities;
-    private ID id;
+    protected Map<ID, T> entities;
 
     public MockRepository() {
-        this.entities = new HashMap<ID, E>();
+        this.entities = new HashMap<>();
     }
 
     public abstract ID nextId();
 
-    private List<E> vals() {
-        return new ArrayList<>(entities.values());
-    }
-
-    private E addOrUpdate(E entity) {
+    private T addOrUpdate(T entity) {
         ID id = null;
         if (entity.isExistingEntity()) {
             id = entity.getId();
@@ -49,82 +39,64 @@ public  class MockRepository<ID extends Serializable> implements BaseRepository<
 
 
     @Override
-    public <S extends Identifiable<ID>> S save(S entity) {
-        return null;
+    public <S extends T> S save(S entity) {
+        return (S) addOrUpdate(entity);
     }
 
     @Override
-    public <S extends Identifiable<ID>> Iterable<S> saveAll(Iterable<S> entities) {
-        return null;
+    public <S extends T> Iterable<S> saveAll(Iterable<S> entities) {
+        entities.forEach(this::addOrUpdate);
+        return entities;
     }
 
     @Override
-    public Optional<Identifiable<ID>> findById(ID id) {
-        return Optional.empty();
+    public Optional<T> findById(ID id) {
+        return Optional.of(entities.get(id));
     }
 
     @Override
     public boolean existsById(ID id) {
-        return false;
+        return entities.containsKey(id);
     }
 
     @Override
-    public Iterable<Identifiable<ID>> findAll() {
-        return null;
+    public Iterable<T> findAll() {
+        return entities.values();
     }
 
     @Override
-    public Iterable<Identifiable<ID>> findAllById(Iterable<ID> ids) {
-        return null;
+    public Iterable<T> findAllById(Iterable<ID> ids) {
+        List<ID> idList = (List<ID>) ids;
+        return entities.values()
+                .stream()
+                .filter(e -> idList.contains(e.getId()))
+                .collect(Collectors.toList());
     }
 
     @Override
     public long count() {
-        return 0;
+        return entities.size();
     }
 
     @Override
     public void deleteById(ID id) {
-
+        entities.remove(id);
     }
 
     @Override
-    public void delete(Identifiable<ID> entity) {
-
+    public void delete(T entity) {
+        this.entities.entrySet().removeIf(k -> k.getValue().equals(entity));
     }
 
     @Override
-    public void deleteAll(Iterable<? extends Identifiable<ID>> entities) {
-
+    public void deleteAll(Iterable<? extends T> entities) {
+        var list = (List<T>) entities;
+        this.entities.entrySet().removeIf(k -> list.contains(k.getValue()));
     }
 
     @Override
     public void deleteAll() {
-
+        entities.clear();
     }
 
-    @Override
-    public List<Identifiable<ID>> save(Identifiable<ID>... entities) {
-        return null;
-    }
-
-    @Override
-    public void delete(Identifiable<ID>... entities) {
-
-    }
-
-    @Override
-    public List<Identifiable<ID>> saveAll(List<Identifiable<ID>> entities) {
-        return null;
-    }
-
-    @Override
-    public List<Identifiable<ID>> modifiableList(Identifiable<ID>... entities) {
-        return null;
-    }
-
-    @Override
-    public List<Identifiable<ID>> modifiableList(List<Identifiable<ID>> list) {
-        return null;
-    }
 }

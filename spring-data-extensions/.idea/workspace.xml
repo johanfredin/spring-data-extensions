@@ -2,21 +2,50 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e6f7f671-d143-4dc8-9579-007cb00d5cae" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepositoryTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/repository/mock/MockRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exstensionsdemo/src/test/java/com/github/johanfredin/exstensionsdemo/TestFixture.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exstensionsdemo/src/test/java/com/github/johanfredin/exstensionsdemo/repository/AddressRepositoryIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exstensionsdemo/src/test/java/com/github/johanfredin/exstensionsdemo/repository/PersonRepositoryIntegrationTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../exstensionsdemo/src/test/java/com/github/johanfredin/exstensionsdemo/repository/mock/MockPersonRepositoryTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Copyable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifiable.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/ServiceBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/PropertyValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/PropertyValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Address.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/domain/Address.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/domain/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/AddressRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/repository/AddressRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/PersonRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/repository/PersonRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/AddressService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/service/AddressService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/PersonService.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/service/PersonService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/AddressServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/service/impl/AddressServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/impl/PersonServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/../exstensionsdemo/src/main/java/com/github/johanfredin/exstensionsdemo/service/impl/PersonServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/messages.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/error.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/img/error.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/style/venuehub.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/addMembersToArtist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editArtist.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/editArtist2.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/addMembersToArtist.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editContact.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editGig.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editMember.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editVenue.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/editVenueReviews.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/findVenues.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/header-member_args.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/header-no_args.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/header.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/jsp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/registerMember.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/resetPassword.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/TestFixture.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/AddressRepositoryIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepositoryTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepositoryTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,8 +59,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="113">
-              <caret line="105" column="60" lean-forward="true" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
+            <state relative-caret-position="1395">
+              <caret line="105" column="60" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -42,70 +71,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
+            <state relative-caret-position="945">
               <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Person.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+            <state relative-caret-position="1020">
+              <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#988#989#0" expanded="true" />
-                <element signature="e#1020#1021#0" expanded="true" />
-                <element signature="e#1055#1056#0" expanded="true" />
-                <element signature="e#1085#1086#0" expanded="true" />
-                <element signature="e#1132#1133#0" expanded="true" />
-                <element signature="e#1170#1171#0" expanded="true" />
-                <element signature="e#1758#1759#0" expanded="true" />
-                <element signature="e#1802#1803#0" expanded="true" />
+                <element signature="e#2263#2264#0" expanded="true" />
+                <element signature="e#2346#2347#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/ChangeDateHolder.java">
+        <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="55" column="23" selection-start-line="55" selection-start-column="23" selection-end-line="55" selection-end-column="23" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1124#1125#0" expanded="true" />
-                <element signature="e#1198#1199#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="30">
+              <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-585">
-              <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#1337#1338#0" expanded="true" />
-                <element signature="e#1364#1365#0" expanded="true" />
-                <element signature="e#1599#1600#0" expanded="true" />
-                <element signature="e#1638#1639#0" expanded="true" />
-                <element signature="e#1705#1706#0" expanded="true" />
-                <element signature="e#1742#1743#0" expanded="true" />
-                <element signature="e#1795#1796#0" expanded="true" />
-                <element signature="e#1822#1823#0" expanded="true" />
-                <element signature="e#2174#2175#0" expanded="true" />
-                <element signature="e#2198#2199#0" expanded="true" />
-                <element signature="e#2263#2264#0" expanded="true" />
-                <element signature="e#2295#2296#0" expanded="true" />
-                <element signature="e#2246#2247#0" expanded="true" />
-                <element signature="e#2296#2297#0" expanded="true" />
-                <element signature="e#2602#2603#0" expanded="true" />
-                <element signature="e#2634#2635#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="285">
+              <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
             </state>
           </provider>
         </entry>
@@ -113,7 +112,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/List.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
+            <state relative-caret-position="2220">
               <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
             </state>
           </provider>
@@ -122,43 +121,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
+            <state relative-caret-position="150">
               <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepository.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="19" selection-start-line="10" selection-start-column="19" selection-end-line="10" selection-end-column="19" />
-              <folding>
-                <element signature="e#272#273#0" expanded="true" />
-                <element signature="e#299#300#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="314">
+              <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/PersonRepositoryIntegrationTest.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/LikeQuery.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="26" column="16" lean-forward="true" selection-start-line="26" selection-start-column="16" selection-end-line="26" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepositoryTest.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="13" column="13" lean-forward="true" selection-start-line="13" selection-start-column="13" selection-end-line="13" selection-end-column="13" />
-              <folding>
-                <element signature="e#420#421#0" expanded="true" />
-                <element signature="e#447#448#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="315">
+              <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
             </state>
           </provider>
         </entry>
@@ -210,7 +192,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/Identifieable.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CrossReferenceHolder.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/AbstractEntity.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/MemberRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/service/MemberService.java" />
@@ -249,6 +230,7 @@
         <option value="$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepositoryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java" />
       </list>
     </option>
   </component>
@@ -273,8 +255,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -344,16 +326,6 @@
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="springdataextensions" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="spring-data-extensions" type="b2602c69:ProjectViewProjectNode" />
-              <item name="spring-data-extensions" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="springdataextensions" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-data-extensions" type="b2602c69:ProjectViewProjectNode" />
@@ -436,10 +408,11 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546198488889" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1546200083268" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="com.github.johanfredin.springdataextensions.repository.BaseRepositoryTest" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../extensionsdemo" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="show.run.dashboard.notification" value="false" />
@@ -449,12 +422,12 @@
       <recent name="com.github.johanfredin.springdataextensions.repository.mock" />
       <recent name="com.github.johanfredin.springdataextensions.domain" />
     </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.github.johanfredin.springdataextensions.domain" />
-    </key>
     <key name="CreateTestDialog.Recents.Supers">
       <recent name="com.github.johanfredin.springdataextensions.repository.BaseRepositoryTest" />
       <recent name="" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.github.johanfredin.springdataextensions.domain" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -560,6 +533,7 @@
       <workItem from="1545727799578" duration="3973000" />
       <workItem from="1545732766335" duration="12582000" />
       <workItem from="1545816288520" duration="1125000" />
+      <workItem from="1546200110254" duration="365000" />
     </task>
     <servers />
   </component>
@@ -596,13 +570,13 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="27474000" />
+    <option name="totallyTimeSpent" value="28041000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="1" width="1366" height="766" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2613293" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.260574" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -612,7 +586,7 @@
       <window_info id="Web" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32973805" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32973805" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32973805" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.3990755" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -641,9 +615,6 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/RedirectEntity.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/Page.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/MvcUtils.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/ExtError.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerBase.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/web/mvc/controller/ControllerExtensions.java" />
@@ -709,9 +680,6 @@
           <caret line="148" column="9" lean-forward="true" selection-start-line="148" selection-start-column="9" selection-end-line="148" selection-end-column="9" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
@@ -807,11 +775,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#644#645#0" expanded="true" />
-            <element signature="e#702#703#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -819,10 +782,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
-          <folding>
-            <element signature="e#634#635#0" expanded="true" />
-            <element signature="e#690#691#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -830,13 +789,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="60">
           <caret line="4" column="37" selection-start-line="4" selection-start-column="36" selection-end-line="4" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/LikeQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
         </state>
       </provider>
     </entry>
@@ -864,17 +816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="27" column="16" lean-forward="true" selection-start-line="27" selection-start-column="16" selection-end-line="27" selection-end-column="16" />
-          <folding>
-            <element signature="e#546#547#0" expanded="true" />
-            <element signature="e#601#602#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/domain/CollectionHolder.java" />
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/domain/CopyableTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="180">
@@ -882,13 +824,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="10" lean-forward="true" selection-start-line="15" selection-start-column="10" selection-end-line="15" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/constants/Constants.java" />
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/RepositoryUtil.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -961,13 +897,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockPersonRepository.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -979,53 +908,81 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/com/github/johanfredin/springdataextensions/repository/BaseRepositoryTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="113">
-          <caret line="105" column="60" lean-forward="true" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
+        <state relative-caret-position="1395">
+          <caret line="105" column="60" selection-start-line="105" selection-start-column="60" selection-end-line="105" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/List.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/data/spring-data-commons/2.1.3.RELEASE/spring-data-commons-2.1.3.RELEASE-sources.jar!/org/springframework/data/repository/CrudRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+        <state relative-caret-position="945">
+          <caret line="77" column="16" selection-start-line="77" selection-start-column="16" selection-end-line="77" selection-end-column="16" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/mock/MockRepository.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="15" column="3" lean-forward="true" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+        <state relative-caret-position="1020">
+          <caret line="80" column="13" selection-start-line="80" selection-start-column="13" selection-end-line="80" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1337#1338#0" expanded="true" />
-            <element signature="e#1364#1365#0" expanded="true" />
-            <element signature="e#1599#1600#0" expanded="true" />
-            <element signature="e#1638#1639#0" expanded="true" />
-            <element signature="e#1705#1706#0" expanded="true" />
-            <element signature="e#1742#1743#0" expanded="true" />
-            <element signature="e#1795#1796#0" expanded="true" />
-            <element signature="e#1822#1823#0" expanded="true" />
-            <element signature="e#2174#2175#0" expanded="true" />
-            <element signature="e#2198#2199#0" expanded="true" />
             <element signature="e#2263#2264#0" expanded="true" />
-            <element signature="e#2295#2296#0" expanded="true" />
-            <element signature="e#2246#2247#0" expanded="true" />
-            <element signature="e#2296#2297#0" expanded="true" />
-            <element signature="e#2602#2603#0" expanded="true" />
-            <element signature="e#2634#2635#0" expanded="true" />
+            <element signature="e#2346#2347#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="25" selection-start-line="2" selection-start-column="25" selection-end-line="2" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk-11/lib/src.zip!/java.base/java/util/List.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2220">
+          <caret line="171" column="12" selection-start-line="171" selection-start-column="12" selection-end-line="171" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/repository/BaseRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="43" column="21" selection-start-line="43" selection-start-column="21" selection-end-line="43" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/LikeQuery.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" lean-forward="true" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparatorImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="37" column="9" lean-forward="true" selection-start-line="18" selection-start-column="8" selection-end-line="37" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/github/johanfredin/springdataextensions/util/comparator/DateComparator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="21" column="25" lean-forward="true" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
         </state>
       </provider>
     </entry>

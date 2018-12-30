@@ -1,6 +1,5 @@
 package com.github.johanfredin.springdataextensions.util;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.domain.PageRequest;
 
@@ -134,7 +133,6 @@ public class RepositoryUtil {
      * @param entities the collection of {@link com.github.johanfredin.springdataextensions.domain.Identifiable} instances we want to see the ids of
      * @return a String representation as [1,2,3] of the ids for passed in entities or [] if entities are empty or NULL when null
      */
-    @JsonIgnore
     public static String getIdsForEntity(Collection<? extends Identifiable> entities) {
         if (entities != null) {
             StringBuilder sb = new StringBuilder();

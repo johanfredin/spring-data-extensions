@@ -78,9 +78,9 @@ public abstract class BaseRepositoryTest<ID, T extends Identifiable<ID>, R exten
     @Test
     public void testFindById() {
         T t = getEntity1();
-        assertFalse("Entity of type=" + entityName() + " should not be an existing entity", t.isExistingEntity());
+        assertFalse("Entity of type=" + entityName() + " should not be an existing entity", t.isPersistedEntity());
         getRepository().save(t);
-        assertTrue("Entity of type=" + entityName() + " should be an existing entity", t.isExistingEntity());
+        assertTrue("Entity of type=" + entityName() + " should be an existing entity", t.isPersistedEntity());
         T tInDB = getRepository().findById(t.getId()).get();
         assertEquals("Entity of type=" + entityName() + " found in db should match the persisted entity", tInDB, t);
     }

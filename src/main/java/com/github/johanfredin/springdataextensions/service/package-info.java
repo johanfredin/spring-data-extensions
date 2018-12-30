@@ -1,4 +1,4 @@
-/*
+/**
  * Copyright 2018 Johan Fredin
  * <p>
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,26 +13,4 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.johanfredin.springdataextensions.util;
-
-/**
- * How to match a 'like' query
- *
- * @author johan
- */
-public enum LikeQuery {
-
-    /**
-     * param = 'param%'
-     */
-    START,
-    /**
-     * param = '%param'
-     */
-    END,
-    /**
-     * param = '%param%'
-     */
-    ALL
-
-}
+package com.github.johanfredin.springdataextensions.service;

@@ -16,38 +16,24 @@
 package com.github.johanfredin.springdataextensions.repository;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
+import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.*;
 
 /**
- * Abstract superclass for all repositories used, extends Spring Data interfaces
+ * Abstract superclass for all repositories used, extends springs {@link CrudRepository}
+ * telling it to work with any type extending {@link Identifiable}. so that all basic
+ * CRUD operations are already in place. also extends {@link CollectionHelper} so those methods
+ * are available for any class implementing this interface.
  *
+ * Refer to {@link CrudRepository} for more information.
+ *
+ * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this repository is working with
+ * @param <T>  any class extending {@link Identifiable}
  * @author johan
  */
 @NoRepositoryBean
-public interface BaseRepository<ID, T extends Identifiable<ID>> extends CrudRepository<T, ID> {
-
-    default List<T> save(T... entities) {
-        return saveAll(modifiableList(entities));
-    }
-
-    default void delete(T... entities) {
-        deleteAll(modifiableList(entities));
-    }
-
-    default List<T> saveAll(List<T> entities) {
-        entities.forEach(this::save);
-        return entities;
-    }
-
-    default List<T> modifiableList(T... entities) {
-        return modifiableList(List.of(entities));
-    }
-
-    default List<T> modifiableList(List<T> list) {
-        return new ArrayList<>(list);
-    }
+public interface BaseRepository<ID, T extends Identifiable<ID>> extends CrudRepository<T, ID>, CollectionHelper<T> {
 }

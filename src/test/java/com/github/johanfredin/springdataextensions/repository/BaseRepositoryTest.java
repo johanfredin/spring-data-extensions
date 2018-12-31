@@ -38,7 +38,7 @@ public abstract class BaseRepositoryTest<ID, T extends Identifiable<ID>, R exten
     public abstract T getEntity2();
 
     public List<T> getEntities() {
-        return getRepository().modifiableList(getEntity1(), getEntity2());
+        return getRepository().mListOf(getEntity1(), getEntity2());
     }
 
     public String entityName() {
@@ -54,7 +54,7 @@ public abstract class BaseRepositoryTest<ID, T extends Identifiable<ID>, R exten
     }
 
     public List<T> persistEntity1And2() {
-        return getRepository().save(getEntity1(), getEntity2());
+        return getRepository().saveAll(getEntity1(), getEntity2());
     }
 
 

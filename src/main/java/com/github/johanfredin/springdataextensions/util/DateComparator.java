@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.johanfredin.springdataextensions.util.comparator;
+package com.github.johanfredin.springdataextensions.util;
 
 import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 

@@ -25,21 +25,40 @@ import java.util.stream.Collectors;
 /**
  * Mock implementation of {@link BaseRepository}. Useful in testing repositories connected
  * to services in controllers or just plain service tests. The mock repository saves data
- * in a {@link HashMap} instead of persisting it in a database. All methods are the same otherwise
+ * in a {@link HashMap} instead of persisting it in a database where map key={@link Identifiable#getId()} and value={@link Identifiable}.
+ * All methods are the same otherwise. Refer to {@link org.springframework.data.repository.CrudRepository} and {@link BaseRepository}
+ * for more documentation.
+ *
+ * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this repository is working with
+ * @param <T> any class extending {@link Identifiable}
  *
  * @author johan
  */
 @NoRepositoryBean
 public abstract class MockRepository<ID, T extends Identifiable<ID>> implements BaseRepository<ID, T> {
 
-    protected Map<ID, T> entities;
+    private Map<ID, T> entities;
 
+    /**
+     * Creates a new instance instantiating the private Map used instead of a DB connection.
+     * Subclasses with their own constructors must call super() on this.
+     */
     public MockRepository() {
         this.entities = new HashMap<>();
     }
 
+    /**
+     * Must be implemented in subclass and match how that class has implemented {@link Identifiable#isPersistedEntity()} method.
+     * Is privately called in the persist methods here to decide whether to persist or merge an entity.
+     * @return a new unique identifier for a new entity of type T to persist.
+     */
     public abstract ID nextId();
 
+    /**
+     * Called in every persist method in this interface so that we know if we are to persist or merge an object.
+     * @param entity the entity to persist
+     * @return the entity persisted.
+     */
     private T addOrUpdate(T entity) {
         ID id = null;
         if (entity.isPersistedEntity()) {

@@ -17,7 +17,7 @@ package com.github.johanfredin.springdataextensions.domain;
 
 /**
  * Common ground for all JPA entities is that they have one or several fields (but at least one primary)
- * telling JPA what is the identifier. The spring data crud repository also requires this information.
+ * telling JPA what is the identifier. The spring data repositories also require this information.
  * This interface holds properties for those fields as well as a boolean method that lets us decide what
  * qualifies as a persisted entity.
  * @param <ID> any {@link Object} that is used as the primary id in the class implementing this interface.

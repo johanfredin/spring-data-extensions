@@ -38,4 +38,18 @@ public interface Copyable<T> {
      */
     T createCopy();
 
+    /**
+     * If this is an instance of {@link CrossReferenceHolder} we will also have the option
+     * to set the cross relations so that the children now points to this new copy
+     * @param setCrossRelations whether or not to call {@link CrossReferenceHolder#setCrossRelations()} if T instanceof Copyable
+     * @return a new copy
+     */
+    default T createCopy(boolean setCrossRelations) {
+        T copy = createCopy();
+        if(copy instanceof CrossReferenceHolder) {
+            ((CrossReferenceHolder) copy).setCrossRelations();
+        }
+        return copy;
+    }
+
 }

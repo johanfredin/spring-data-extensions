@@ -15,24 +15,22 @@
  */
 package com.github.johanfredin.springdataextensions.repository;
 
+import org.junit.Test;
+
 public interface CascadeIntegrationTest {
 
     /**
      * Test to make sure references that are marked with Cascade.PERSIST gets persisted
      * when owning entity is persisted
      */
+    @Test
     void testCascadePersist();
-
-    /**
-     * Test to make sure references that are marked with Cascade.MERGE gets merged
-     * when owning entity is merged
-     */
-    void testCascadeMerge();
 
     /**
      * Test to make sure references that are marked with Cascade.DELETE gets deleted
      * when owning entity is deleted
      */
+    @Test
     void testCascadeDelete();
 
 }

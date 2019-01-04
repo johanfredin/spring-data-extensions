@@ -18,8 +18,6 @@ package com.github.johanfredin.springdataextensions.repository;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import com.github.johanfredin.springdataextensions.util.RepositoryUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.junit.After;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -37,13 +35,14 @@ import static org.junit.Assert.*;
  * should extend this test class thereby reducing code duplication and making sure CRUD operations work
  * properly.
  *
+ * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this service is working with
+ * @param <T>  Any JPA entity extending {@link Identifiable}
+ * @param <R>  Any class extending {@link BaseRepository}
  * @author johan
  */
 @RunWith(SpringRunner.class)
 @DataJpaTest
-public abstract class BaseRepositoryTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements CollectionHelper<T> {
-
-    public Logger log = LogManager.getLogger(this.getClass());
+public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements CollectionHelper<T> {
 
     public abstract R getRepository();
 

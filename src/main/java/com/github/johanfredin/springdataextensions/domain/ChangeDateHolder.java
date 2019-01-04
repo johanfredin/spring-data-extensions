@@ -21,10 +21,8 @@ import org.joda.time.format.DateTimeFormat;
 
 /**
  * Interface for entities that should hold a change date.
- * Extends {@link Identifiable}
- * @param <ID> any {@link Object} that is used as the primary id in the class implementing this interface.
  */
-public interface ChangeDateHolder<ID> extends Identifiable<ID> {
+public interface ChangeDateHolder {
 
     /**
      * @return the date when the last change occurred formatted as "yyyy-MM-dd HH:mm:ss"

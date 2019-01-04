@@ -13,26 +13,20 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.github.johanfredin.springdataextensions.repository;
+package com.github.johanfredin.springdataextensions.domain;
 
-public interface CascadeTest {
+import org.junit.Test;
 
-    /**
-     * Test to make sure references that are marked with Cascade.PERSIST gets persisted
-     * when owning entity is persisted
-     */
-    void testCascadePersist();
-
-    /**
-     * Test to make sure references that are marked with Cascade.MERGE gets merged
-     * when owning entity is merged
-     */
-    void testCascadeMerge();
+/**
+ * When working with entities that have cross relations (e.g {@link CrossReferenceHolder})
+ * we want to make sure we set the setCrossRelations() method up as expected.
+ */
+public interface CrossReferenceTest {
 
     /**
-     * Test to make sure references that are marked with Cascade.DELETE gets deleted
-     * when owning entity is deleted
+     * Test {@link CrossReferenceHolder#setCrossRelations()}
      */
-    void testCascadeDelete();
+    @Test
+    void testSetCrossRelations();
 
 }

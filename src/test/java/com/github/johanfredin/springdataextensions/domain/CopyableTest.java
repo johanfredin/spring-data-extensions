@@ -18,14 +18,16 @@ package com.github.johanfredin.springdataextensions.domain;
 import org.junit.Test;
 
 /**
- *
+ * Interface for testing that the copy methods implemented in you {@link Copyable} implementation
+ * works as intended.
+ * @author johan
  */
-public abstract class CopyableTest {
+public interface CopyableTest {
 
     @Test
-    public abstract void testCopyFrom();
+    void testCopyFrom();
 
     @Test
-    public abstract void testCreateCopy();
+    void testCreateCopy();
 
 }

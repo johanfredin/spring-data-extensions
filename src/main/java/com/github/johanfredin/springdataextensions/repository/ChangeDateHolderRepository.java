@@ -15,8 +15,10 @@
  */
 package com.github.johanfredin.springdataextensions.repository;
 
+import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.springframework.data.repository.CrudRepository;
+import org.springframework.data.repository.NoRepositoryBean;
 
 import java.util.Collection;
 import java.util.List;
@@ -28,16 +30,32 @@ import java.util.Set;
  * the somewhat "basic" operations in the {@link CrudRepository} that works with {@link Iterable}.
  * If you are going to work with {@link org.springframework.data.jpa.repository.JpaRepository} or some
  * more advanced spring data interfaces then you probably wont need this interface.
+ *
  * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this repository is working with
  * @param <T>  any class extending {@link Identifiable}
  * @author johan
  */
-public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends BaseRepository<ID, T> {
+@NoRepositoryBean
+public interface ChangeDateHolderRepository<ID, T extends ChangeDateHolder<ID>> extends BaseRepository<ID, T> {
+
+    default T save(T entity, boolean updateLastChangeDate) {
+        if(updateLastChangeDate) {
+            entity.updateLastChangeDate();
+        }
+        return save(entity);
+    }
+
+    @Override
+    default <S extends T> Iterable<S> saveAll(Iterable<S> entities) {
+        entities.forEach(e -> save(e, true));
+        return entities;
+    }
 
     /**
      * Same as {@link CrudRepository#saveAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in an arbitrary
      * amount of entities.
+     *
      * @param entities the entities to persist.
      * @return the entities persisted as a List.
      */
@@ -49,6 +67,7 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
      * Same as {@link CrudRepository#saveAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in an arbitrary
      * amount of entities.
+     *
      * @param entities the entities to persist.
      * @return the entities persisted as a Set.
      */
@@ -59,22 +78,24 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
     /**
      * Same as {@link CrudRepository#saveAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in a list of entities to persist.
+     *
      * @param entities the entities to persist.
      * @return the entities persisted as a List.
      */
     default List<T> saveAll(List<T> entities) {
-        entities.forEach(this::save);
+        entities.forEach(e -> save(e, true));
         return entities;
     }
 
     /**
      * Same as {@link CrudRepository#saveAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in a set of entities to persist.
+     *
      * @param entities the entities to persist.
      * @return the entities persisted as a Set.
      */
     default Set<T> saveAll(Set<T> entities) {
-        entities.forEach(this::save);
+        entities.forEach(e -> save(e, true));
         return entities;
     }
 
@@ -82,6 +103,7 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
      * Same as {@link CrudRepository#deleteAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in an arbitrary
      * amount of entities.
+     *
      * @param entities the entities to delete.
      */
     default void deleteAll(T... entities) {
@@ -91,10 +113,12 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
     /**
      * Same as {@link CrudRepository#deleteAll(Iterable)} but instead
      * of passing in an {@link Iterable} we can pass in a collection.
+     *
      * @param entities the entities to delete.
      */
     default void deleteAll(Collection<T> entities) {
         entities.forEach(this::delete);
     }
+
 
 }

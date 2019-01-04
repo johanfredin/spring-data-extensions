@@ -15,102 +15,193 @@
  */
 package com.github.johanfredin.springdataextensions.service;
 
-import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
+import com.github.johanfredin.springdataextensions.util.CollectionHelper;
+import org.springframework.data.repository.CrudRepository;
 
-import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
+import java.util.Set;
 
 /**
- * Basic service to contain the basic CRUD functionality for our services.
- * Much like the {@link BaseRepository} interface. All methods here are by default
- * sent to a corresponding {@link BaseRepository} implementation class.
+ * Abstract service layer. By convention repositories should not be directly exposed
+ * to Controllers and web layers. They should call services only and those services should
+ * redirect to the repository layer. This interface (by default) holds all the methods that
+ * the {@link BaseRepository} holds. All methods have default implementations except one called
+ * {@link #getRepository()} that implementing classes must define to let this service know what
+ * {@link BaseRepository} implementation we need to call.
+ * <p>
+ * All the default methods have the same name and will by default call
+ * the corresponding repository method.<br/>
+ * e.g Service.save(T type) will call {@link #getRepository()#save(Identifiable)}.
+ * <p>
+ * Also extends {@link CollectionHelper} so that those methods become available here as well.
  *
- * @param <T> Any JPA entity extending {@link Identifiable}
- * @param <R> Any class extending {@link BaseRepository}
+ * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this service is working with
+ * @param <T>  Any JPA entity extending {@link Identifiable}
+ * @param <R>  Any class extending {@link BaseRepository}
  * @author johan
  */
-public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> {
+public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> extends CollectionHelper<T> {
 
     /**
      * Get the repository implementation
      *
-     * @return
+     * @return the {@link BaseRepository} implementation this service will call.
      */
     R getRepository();
-
-    /**
-     * This method takes for granted that the entity is persisted.
-     * Will update the entitys change date if so
-     *
-     * @param entity
-     * @return a call to {@link #save(Identifiable)} with an updated change date
-     */
-    default T save(T entity, boolean updateLastCangeDate) {
-        if (entity != null && 
-                entity instanceof ChangeDateHolder &&
-                updateLastCangeDate &&
-                entity.isPersistedEntity()) {
-            ((ChangeDateHolder) entity).updateLastChangeDate();
-        }
-        return save(entity);
-    }
 
     default T save(T entity) {
         return getRepository().save(entity);
     }
 
+    /**
+     * Refer to {@link org.springframework.data.repository.CrudRepository#saveAll(Iterable)}
+     *
+     * @param entities the entities to persist
+     * @return the persisted entities
+     */
     default Iterable<T> saveAll(Iterable<T> entities) {
         return getRepository().saveAll(entities);
     }
 
+    /**
+     * Refer to {@link org.springframework.data.repository.CrudRepository#findById(Object)}
+     *
+     * @param id the identifier of the entity to find
+     * @return an optional containing a found entity or empty optional.
+     */
     default Optional<T> findById(ID id) {
         return getRepository().findById(id);
     }
 
+    /**
+     * Refer to {@link org.springframework.data.repository.CrudRepository#existsById(Object)}
+     *
+     * @param id the identifier of the entity to check if persisted or not
+     * @return true if an entity with passed in id exists.
+     */
     default boolean existsById(ID id) {
         return getRepository().existsById(id);
     }
 
+    /**
+     * Refer to {@link CrudRepository#findAll()}
+     *
+     * @return all entities of type T in database or an empty collection.
+     */
     default Iterable<T> findAll() {
         return getRepository().findAll();
     }
 
+    /**
+     * Refer to {@link CrudRepository#findAllById(Iterable)}
+     * @param ids the identifiers of entities to find
+     * @return all entities matching the identifiers passed in or an empty collection if none found.
+     */
     default Iterable<T> findAllById(Iterable<ID> ids) {
         return getRepository().findAllById(ids);
     }
 
+    /**
+     * Refer to {@link CrudRepository#count()}
+     * @return the amount of entities in database.
+     */
     default long count() {
         return getRepository().count();
     }
 
+    /**
+     * Refer to {@link CrudRepository#deleteById(Object)}
+     * @param id the identifier of the entity to delete.
+     */
     default void deleteById(ID id) {
         getRepository().deleteById(id);
     }
 
+    /**
+     * Refer to {@link CrudRepository#delete(Object)}
+     * @param entity the entity to delete
+     */
     default void delete(T entity) {
         getRepository().delete(entity);
     }
 
+    /**
+     * Refer to {@link CrudRepository#deleteAll(Iterable)}
+     * @param entities the entities to delete
+     */
     default void deleteAll(Iterable<T> entities) {
         getRepository().deleteAll(entities);
     }
 
+    /**
+     * Refer to {@link CrudRepository#deleteAll()}
+     */
     default void deleteAll() {
         getRepository().deleteAll();
     }
 
-    default List<T> save(T... entities) {
-        return saveAll(new ArrayList<>(List.of(entities)));
+    /**
+     * Refer to {@link BaseRepository#saveAll(Identifiable[])}
+     *
+     * @param entities the entities to persist.
+     * @return the entities persisted as a List.
+     */
+    default List<T> saveAll(T... entities) {
+        return saveAll(mListOf(entities));
     }
 
-    default void delete(T... entities) {
+    /**
+     * Refer to {@link BaseRepository#saveAllAsSet(Identifiable[])}
+     *
+     * @param entities the entities to persist.
+     * @return the entities persisted as a Set.
+     */
+    default Set<T> saveAllAsSet(T... entities) {
+        return saveAll(mSetOf(entities));
+    }
+
+    /**
+     * Refer to {@link BaseRepository#saveAll(List)}
+     *
+     * @param entities the entities to persist.
+     * @return the entities persisted as a List.
+     */
+    default List<T> saveAll(List<T> entities) {
+        entities.forEach(this::save);
+        return entities;
+    }
+
+    /**
+     * Refer to {@link BaseRepository#saveAll(Set)}
+     *
+     * @param entities the entities to persist.
+     * @return the entities persisted as a Set.
+     */
+    default Set<T> saveAll(Set<T> entities) {
+        entities.forEach(this::save);
+        return entities;
+    }
+
+    /**
+     * Refer to {@link BaseRepository#deleteAll(Identifiable[])}
+     *
+     * @param entities the entities to delete.
+     */
+    default void deleteAll(T... entities) {
         deleteAll(List.of(entities));
     }
 
-    default List<T> saveAll(List<T> entities) {
-        return saveAll(entities);
+    /**
+     * Refer to {@link BaseRepository#deleteAll(Collection)}
+     *
+     * @param entities the entities to delete.
+     */
+    default void deleteAll(Collection<T> entities) {
+        entities.forEach(this::delete);
     }
+
 }

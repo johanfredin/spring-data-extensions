@@ -4,7 +4,11 @@ import com.github.johanfredin.springdataextensions.api.doman.Person;
 import com.github.johanfredin.springdataextensions.api.doman.Pet;
 import com.github.johanfredin.springdataextensions.repository.CascadeIntegrationTest;
 import com.github.johanfredin.springdataextensions.repository.ExtendedBaseRepositoryTest;
+import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -12,6 +16,8 @@ import java.util.List;
 import static junit.framework.TestCase.assertFalse;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
+@RunWith(SpringRunner.class)
+@DataJpaTest
 public class PersonRepositoryIntegrationTest extends ExtendedBaseRepositoryTest<Long, Person, PersonRepository> implements CascadeIntegrationTest {
 
     @Autowired
@@ -24,12 +30,12 @@ public class PersonRepositoryIntegrationTest extends ExtendedBaseRepositoryTest<
 
     @Override
     public Person getEntity1() {
-        return new Person("Johan");
+        return new Person("Johan", mListOf(new Pet("Greg")));
     }
 
     @Override
     public Person getEntity2() {
-        return new Person("Evelyn");
+        return new Person("Evelyn", mListOf(new Pet("Ava")));
     }
 
     @Override

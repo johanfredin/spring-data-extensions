@@ -27,7 +27,7 @@ import java.util.Set;
  * @author johan
  */
 @NoRepositoryBean
-public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends BaseRepository<ID, T>, CollectionHelper<T> {
+public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends BaseRepository<ID, T>, CollectionHelper {
 
     /**
      * Same as {@link CrudRepository#saveAll(Iterable)} but instead

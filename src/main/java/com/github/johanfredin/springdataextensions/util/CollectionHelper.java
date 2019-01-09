@@ -23,16 +23,15 @@ import java.util.*;
  * methods were added. However these create immutable collections that are not always what
  * we want to work with. This interface aims to have the same ease of use but instead creates
  * mutable collections.
- * @param <T> the type the collection will contain.
  */
-public interface CollectionHelper<T> {
+public interface CollectionHelper {
 
     /**
      * Creates a mutable list of the entities passed in.
      * @param entities the entities to put in the list
      * @return the entities passes in as a mutable list.
      */
-    default List<T> mListOf(T... entities) {
+    default <T> List<T> mListOf(T... entities) {
         return mListOf(List.of(entities));
     }
 
@@ -41,7 +40,7 @@ public interface CollectionHelper<T> {
      * @param list the entities to put in the list
      * @return the entities passes in as a mutable list.
      */
-    default List<T> mListOf(Collection<T> list) {
+    default <T> List<T> mListOf(Collection<T> list) {
         return new ArrayList<>(list);
     }
 
@@ -50,7 +49,7 @@ public interface CollectionHelper<T> {
      * @param entities the entities to put in the set
      * @return the entities passes in as a mutable set.
      */
-    default Set<T> mSetOf(T... entities) {
+    default <T> Set<T> mSetOf(T... entities) {
         return mSetOf(Set.of(entities));
     }
 
@@ -59,7 +58,7 @@ public interface CollectionHelper<T> {
      * @param entities the entities to put in the set
      * @return the entities passes in as a mutable set.
      */
-    default Set<T> mSetOf(Set<T> entities) {
+    default <T> Set<T> mSetOf(Set<T> entities) {
         return new HashSet<T>(entities);
     }
 

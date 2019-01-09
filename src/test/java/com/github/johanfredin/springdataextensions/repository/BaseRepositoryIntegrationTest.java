@@ -20,9 +20,6 @@ import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import com.github.johanfredin.springdataextensions.util.RepositoryUtil;
 import org.junit.After;
 import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
-import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.Collection;
 import java.util.List;
@@ -41,9 +38,7 @@ import static org.junit.Assert.*;
  * @param <R>  Any class extending {@link BaseRepository}
  * @author johan
  */
-@RunWith(SpringRunner.class)
-@DataJpaTest
-public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements CollectionHelper<T> {
+public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements CollectionHelper {
 
     public abstract R getRepository();
 
@@ -98,12 +93,8 @@ public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<I
 
     @Test
     public void testFindById() {
-        T t = getEntity1();
-        assertFalse("Entity of type=" + entityName() + " should not be an existing entity", t.isPersistedEntity());
-        getRepository().save(t);
-        assertTrue("Entity of type=" + entityName() + " should be an existing entity", t.isPersistedEntity());
-        T tInDB = getRepository().findById(t.getId()).get();
-        assertEquals("Entity of type=" + entityName() + " found in db should match the persisted entity", tInDB, t);
+        T entity = getRepository().findById(persistEntity1().getId()).get();
+        assertNotNull("Entity of type=" + entityName() + " with id=" + entity.getId() + " should exist in db", entity);
     }
 
     @Test

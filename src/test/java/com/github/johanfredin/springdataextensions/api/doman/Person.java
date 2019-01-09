@@ -17,7 +17,7 @@ public class Person implements Identifiable<Long>, Copyable<Person> {
 
     private String name;
 
-    @OneToMany(cascade = CascadeType.ALL)
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private List<Pet> pets;
 
     public Person() {}
@@ -31,7 +31,13 @@ public class Person implements Identifiable<Long>, Copyable<Person> {
         this.name = name;
     }
 
+    public Person(String name, List<Pet> pets) {
+        this.name = name;
+        this.pets = pets;
+    }
+
     public Person(long id, String name, List<Pet> pets) {
+        this.id = id;
         this.name = name;
         this.pets = pets;
     }
@@ -79,4 +85,12 @@ public class Person implements Identifiable<Long>, Copyable<Person> {
         return new Person(getId(), getName(), getPets());
     }
 
+    @Override
+    public String toString() {
+        return "Person{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", pets=" + (pets == null ? "null" : pets) +
+                '}';
+    }
 }

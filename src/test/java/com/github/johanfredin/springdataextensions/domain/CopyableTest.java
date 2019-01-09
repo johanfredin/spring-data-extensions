@@ -15,10 +15,6 @@
  */
 package com.github.johanfredin.springdataextensions.domain;
 
-import org.junit.Test;
-
-import java.util.List;
-
 /**
  * Interface for testing that the copy methods implemented in you {@link Copyable} implementation
  * works as intended.
@@ -26,10 +22,14 @@ import java.util.List;
  */
 public interface CopyableTest<T> {
 
-    @Test
+    /**
+     * Test {@link Copyable#copyFrom(Object)}
+     */
     void testCopyFrom();
 
-    @Test
+    /**
+     * Test {@link Copyable#createCopy()}
+     */
     void testCreateCopy();
 
 }

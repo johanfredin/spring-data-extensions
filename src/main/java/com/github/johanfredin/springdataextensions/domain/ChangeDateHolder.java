@@ -22,7 +22,7 @@ import org.joda.time.format.DateTimeFormat;
 /**
  * Interface for entities that should hold a change date.
  */
-public interface ChangeDateHolder {
+public interface ChangeDateHolder<ID> extends Identifiable<ID> {
 
     /**
      * @return the date when the last change occurred formatted as "yyyy-MM-dd HH:mm:ss"

@@ -15,8 +15,6 @@
  */
 package com.github.johanfredin.springdataextensions.domain;
 
-import org.junit.Test;
-
 /**
  * When working with entities that have cross relations (e.g {@link CrossReferenceHolder})
  * we want to make sure we set the setCrossRelations() method up as expected.
@@ -26,7 +24,6 @@ public interface CrossReferenceTest {
     /**
      * Test {@link CrossReferenceHolder#setCrossRelations()}
      */
-    @Test
     void testSetCrossRelations();
 
 }

@@ -15,22 +15,23 @@
  */
 package com.github.johanfredin.springdataextensions.repository;
 
-import org.junit.Test;
-
+/**
+ * Intended to be used with JPA entities that have child or sibling entities
+ * with at least Cascade PERSIST and DELETE.
+ * @author johan
+ */
 public interface CascadeIntegrationTest {
 
     /**
      * Test to make sure references that are marked with Cascade.PERSIST gets persisted
      * when owning entity is persisted
      */
-    @Test
     void testCascadePersist();
 
     /**
      * Test to make sure references that are marked with Cascade.DELETE gets deleted
      * when owning entity is deleted
      */
-    @Test
     void testCascadeDelete();
 
 }

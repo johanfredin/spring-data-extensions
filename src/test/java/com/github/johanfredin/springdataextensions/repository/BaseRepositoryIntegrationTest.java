@@ -24,6 +24,7 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Collection;
 import java.util.List;
 
 import static org.junit.Assert.*;
@@ -70,6 +71,13 @@ public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<I
         return getRepository().save(getEntity2());
     }
 
+    protected void assertPersisted(Collection<T> collection) {
+        collection.forEach(e -> assertEquals("Persisted", true, e.isPersistedEntity()));
+    }
+
+    protected void assertDeleted(Collection<T> collection) {
+        collection.forEach(e -> assertEquals("Deleted", false, getRepository().existsById(e.getId())));
+    }
 
     @After
     public void tearDown() {

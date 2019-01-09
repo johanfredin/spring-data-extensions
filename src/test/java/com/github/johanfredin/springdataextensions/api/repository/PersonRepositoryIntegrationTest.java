@@ -2,8 +2,8 @@ package com.github.johanfredin.springdataextensions.api.repository;
 
 import com.github.johanfredin.springdataextensions.api.doman.Person;
 import com.github.johanfredin.springdataextensions.api.doman.Pet;
-import com.github.johanfredin.springdataextensions.repository.BaseRepositoryIntegrationTest;
 import com.github.johanfredin.springdataextensions.repository.CascadeIntegrationTest;
+import com.github.johanfredin.springdataextensions.repository.ExtendedBaseRepositoryTest;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import java.util.ArrayList;
@@ -12,7 +12,7 @@ import java.util.List;
 import static junit.framework.TestCase.assertFalse;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
 
-public class PersonRepositoryIntegrationTest extends BaseRepositoryIntegrationTest<Long, Person, PersonRepository> implements CascadeIntegrationTest {
+public class PersonRepositoryIntegrationTest extends ExtendedBaseRepositoryTest<Long, Person, PersonRepository> implements CascadeIntegrationTest {
 
     @Autowired
     private PersonRepository personRepository;

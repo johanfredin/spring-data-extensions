@@ -21,14 +21,15 @@ import com.github.johanfredin.springdataextensions.domain.Identifiable;
 /**
  * When working with entities that have cross relations (e.g {@link CrossReferenceHolder})
  * we want to
- * @param <ID>
- * @param <T>
+ * @param <ID> any {@link Object} that is used as the primary id in the class implementing this interface.
+ * @param <T> any class extending {@link Identifiable}
+ * @author johan
  */
 public interface CrossReferenceHolderIntegrationTest<ID, T extends Identifiable<ID>> {
 
     /**
-     * Creates a new entity T and populates all its children and relations.
-     * The main entity and its children will not be persisted in the DB.
+     * Intended to create a new entity T and populate all its children and relations.
+     * The main entity and its children should not be persisted in the DB.
      *
      * @param biDirectional whether or not to have the children set their relations with their parent T as well
      * @return a fully populated entity T with all its children not persisted in DB
@@ -36,8 +37,8 @@ public interface CrossReferenceHolderIntegrationTest<ID, T extends Identifiable<
     T getFullyPopulatedUnpersistedEntity(boolean biDirectional);
 
     /**
-     * Creates a new entity T and populates all its children and relations.
-     * The main entity and its children will be persisted in the DB.
+     * Intended to create a new entity T and populate all its children and relations.
+     * The main entity and its children should be persisted in the DB.
      *
      * @param biDirectional whether or not to have the children set their relations with their parent T as well
      * @return a fully populated entity T with all its children persisted in DB

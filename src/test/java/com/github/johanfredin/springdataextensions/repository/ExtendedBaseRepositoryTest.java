@@ -9,6 +9,14 @@ import java.util.Set;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Tests all the methods in {@link ExtendedBaseRepository}
+ *
+ * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this service is working with
+ * @param <T>  Any JPA entity extending {@link Identifiable}
+ * @param <R>  Any class extending {@link BaseRepository}
+ * @author johan
+ */
 public abstract class ExtendedBaseRepositoryTest<ID, T extends Identifiable<ID>, R extends ExtendedBaseRepository<ID, T>>
         extends BaseRepositoryIntegrationTest<ID, T, R> {
 

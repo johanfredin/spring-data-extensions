@@ -20,6 +20,7 @@ import com.github.johanfredin.springdataextensions.repository.BaseRepository;
 import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import org.springframework.data.repository.CrudRepository;
 
+import javax.validation.constraints.NotNull;
 import java.util.Optional;
 
 /**
@@ -71,8 +72,16 @@ public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepos
      * @param id the identifier of the entity to find
      * @return an optional containing a found entity or empty optional.
      */
-    default Optional<T> findById(ID id) {
+    default Optional<T> findById(@NotNull ID id) {
         return getRepository().findById(id);
+    }
+
+    default T getEntityById(@NotNull ID id) {
+        Optional<T> optionalT = findById(id);
+        if(optionalT.isEmpty()) {
+            return null;
+        }
+        return optionalT.get();
     }
 
     /**

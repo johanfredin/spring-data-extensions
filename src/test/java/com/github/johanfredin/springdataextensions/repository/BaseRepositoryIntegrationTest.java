@@ -15,8 +15,8 @@
  */
 package com.github.johanfredin.springdataextensions.repository;
 
+import com.github.johanfredin.springdataextensions.TransactionalTest;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
-import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import com.github.johanfredin.springdataextensions.util.RepositoryUtil;
 import org.junit.After;
 import org.junit.Test;
@@ -38,24 +38,12 @@ import static org.junit.Assert.*;
  * @param <R>  Any class extending {@link BaseRepository}
  * @author johan
  */
-public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements CollectionHelper {
+public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<ID>, R extends BaseRepository<ID, T>> implements TransactionalTest<T> {
 
     public abstract R getRepository();
 
-    public abstract T getEntity1();
-
-    public abstract T getEntity2();
-
     public List<T> persistEntity1And2() {
         return mListOf(persistEntity1(), persistEntity2());
-    }
-
-    public List<T> getEntities() {
-        return mListOf(getEntity1(), getEntity2());
-    }
-
-    public String entityName() {
-        return getEntity1().getClass().getSimpleName();
     }
 
     public T persistEntity1() {

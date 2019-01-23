@@ -2,7 +2,10 @@ package com.github.johanfredin.springdataextensions.api.doman;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 
-import javax.persistence.*;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 @Entity
 public class Pet implements Identifiable<Long> {

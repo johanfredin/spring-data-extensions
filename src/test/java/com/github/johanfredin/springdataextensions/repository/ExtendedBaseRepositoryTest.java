@@ -1,9 +1,23 @@
+/*
+ * Copyright 2018 Johan Fredin
+ * <p>
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ * <p>
+ * http://www.apache.org/licenses/LICENSE-2.0
+ * <p>
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 package com.github.johanfredin.springdataextensions.repository;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import org.junit.Test;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -20,19 +34,15 @@ import static org.junit.Assert.assertEquals;
 public abstract class ExtendedBaseRepositoryTest<ID, T extends Identifiable<ID>, R extends ExtendedBaseRepository<ID, T>>
         extends BaseRepositoryIntegrationTest<ID, T, R> {
 
-    /**
-     * Test {@link ExtendedBaseRepository#saveAll(Identifiable[])}
-     */
+    /** Test {@link ExtendedBaseRepository#saveAll(Object[])} */
     @Test
-    public void testSaveAllListArbiraryArguments() {
+    public void testSaveAll_ArbitraryArguments_ReturnsList() {
         var listWithArbitraryArguments = getRepository().saveAll(getEntity1(), getEntity2());
         assertEquals("List", true, listWithArbitraryArguments instanceof List);
         assertPersisted(listWithArbitraryArguments);
     }
 
-    /**
-     * Test {@link ExtendedBaseRepository#saveAllAsSet(Identifiable[])}
-     */
+    /** Test {@link ExtendedBaseRepository#saveAllAsSet(Object[])} */
     @Test
     public void testSaveAllAsSet() {
         var setWithArbitraryArguments = getRepository().saveAllAsSet(getEntity1(), getEntity2());
@@ -40,42 +50,26 @@ public abstract class ExtendedBaseRepositoryTest<ID, T extends Identifiable<ID>,
         assertPersisted(setWithArbitraryArguments);
     }
 
-    /**
-     * Test {@link ExtendedBaseRepository#saveAll(List)}
-     */
+    /** Test {@link ExtendedBaseRepository#saveAll(List)} */
     @Test
-    public void testSaveAllList() {
+    public void testSaveAll_ReturnsList() {
         var list = getRepository().saveAll(List.of(getEntity1(), getEntity2()));
         assertEquals("List", true, list instanceof List);
         assertPersisted(list);
     }
 
-    /**
-     * Test {@link ExtendedBaseRepository#saveAll(Set)}
-     */
+    /** Test {@link ExtendedBaseRepository#saveAll(Set)} */
     @Test
-    public void testSaveAllSet() {
+    public void testSaveAll_ReturnsSet() {
         var set = getRepository().saveAll(Set.of(getEntity1(), getEntity2()));
         assertEquals("Set", true, set instanceof Set);
         assertPersisted(set);
     }
 
-    /**
-     * Test {@link ExtendedBaseRepository#deleteAll(Identifiable[])}
-     */
+    /** Test {@link ExtendedBaseRepository#deleteAll(Object[])} */
     @Test
-    public void testDeleteAllCollectionArbitraryAmount() {
+    public void testDeleteAll_ArbitraryAmount() {
         var set = getRepository().saveAllAsSet(getEntity1(), getEntity2());
-        getRepository().deleteAll(set);
-        assertDeleted(set);
-    }
-
-    /**
-     * Test {@link ExtendedBaseRepository#deleteAll(Identifiable[])}
-     */
-    @Test
-    public void testDeleteAllCollection() {
-        var set = getRepository().saveAll(Set.of(getEntity1(), getEntity2()));
         getRepository().deleteAll(set);
         assertDeleted(set);
     }

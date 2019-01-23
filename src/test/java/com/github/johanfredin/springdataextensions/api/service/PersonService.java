@@ -2,7 +2,7 @@ package com.github.johanfredin.springdataextensions.api.service;
 
 import com.github.johanfredin.springdataextensions.api.doman.Person;
 import com.github.johanfredin.springdataextensions.api.repository.PersonRepository;
-import com.github.johanfredin.springdataextensions.service.ServiceBase;
+import com.github.johanfredin.springdataextensions.service.ExtendedServiceBase;
 
-public interface PersonService extends ServiceBase<Long, Person, PersonRepository> {
+public interface PersonService extends ExtendedServiceBase<Long, Person, PersonRepository> {
 }

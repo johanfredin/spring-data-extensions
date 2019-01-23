@@ -17,7 +17,6 @@ package com.github.johanfredin.springdataextensions.service;
 
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
-import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import org.springframework.data.repository.CrudRepository;
 
 import javax.validation.constraints.NotNull;

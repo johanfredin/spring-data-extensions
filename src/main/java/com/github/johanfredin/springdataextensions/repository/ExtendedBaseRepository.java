@@ -1,12 +1,11 @@
 package com.github.johanfredin.springdataextensions.repository;
 
-import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.util.CollectionHelper;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import java.util.Collection;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 
@@ -38,7 +37,9 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
      * @return the entities persisted as a List.
      */
     default List<T> saveAll(T... entities) {
-        return saveAll(mListOf(entities));
+        List<T> list = mListOf(entities);
+        list.forEach(this::save);
+        return list;
     }
 
     /**
@@ -50,7 +51,9 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
      * @return the entities persisted as a Set.
      */
     default Set<T> saveAllAsSet(T... entities) {
-        return saveAll(mSetOf(entities));
+        Set<T> set = mSetOf(entities);
+        set.forEach(this::save);
+        return set;
     }
 
     /**
@@ -85,17 +88,7 @@ public interface ExtendedBaseRepository<ID, T extends Identifiable<ID>> extends 
      * @param entities the entities to delete.
      */
     default void deleteAll(T... entities) {
-        deleteAll(List.of(entities));
-    }
-
-    /**
-     * Same as {@link CrudRepository#deleteAll(Iterable)} but instead
-     * of passing in an {@link Iterable} we can pass in a collection.
-     *
-     * @param entities the entities to delete.
-     */
-    default void deleteAll(Collection<T> entities) {
-        entities.forEach(this::delete);
+        Arrays.asList(entities).forEach(this::delete);
     }
 
 

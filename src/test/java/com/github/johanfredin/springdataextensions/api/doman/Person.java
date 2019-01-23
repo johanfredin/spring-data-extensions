@@ -1,7 +1,6 @@
 package com.github.johanfredin.springdataextensions.api.doman;
 
 import com.github.johanfredin.springdataextensions.domain.Copyable;
-import com.github.johanfredin.springdataextensions.domain.CrossReferenceHolder;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 
 import javax.persistence.*;

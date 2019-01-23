@@ -15,11 +15,9 @@
  */
 package com.github.johanfredin.springdataextensions.service;
 
-import com.github.johanfredin.springdataextensions.domain.ChangeDateHolder;
 import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.ExtendedBaseRepository;
 
-import java.util.Collection;
 import java.util.List;
 import java.util.Set;
 
@@ -53,7 +51,7 @@ public interface ExtendedServiceBase<ID, T extends Identifiable<ID>, R extends E
      * @return the entities persisted as a Set.
      */
     default Set<T> saveAllAsSet(T... entities) {
-        return getRepository().saveAllAsSet();
+        return getRepository().saveAllAsSet(entities);
     }
 
     /**
@@ -76,7 +74,11 @@ public interface ExtendedServiceBase<ID, T extends Identifiable<ID>, R extends E
         return getRepository().saveAll(entities);
     }
 
-    default void deleteAll(Collection<T> entities) {
+    /**
+     * Refer to {@link ExtendedBaseRepository#deleteAll(Identifiable[])}
+     * @param entities arbitrary amount of entities to delete.
+     */
+    default void deleteAll(T... entities) {
         getRepository().deleteAll(entities);
     }
 

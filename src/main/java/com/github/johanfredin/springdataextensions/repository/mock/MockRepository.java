@@ -19,7 +19,10 @@ import com.github.johanfredin.springdataextensions.domain.Identifiable;
 import com.github.johanfredin.springdataextensions.repository.BaseRepository;
 import org.springframework.data.repository.NoRepositoryBean;
 
-import java.util.*;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 /**

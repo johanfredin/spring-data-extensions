@@ -32,7 +32,7 @@ public interface CollectionHelper {
      * @return the entities passes in as a mutable list.
      */
     default <T> List<T> mListOf(T... entities) {
-        return mListOf(List.of(entities));
+        return new ArrayList<>(List.of(entities));
     }
 
     /**
@@ -50,7 +50,7 @@ public interface CollectionHelper {
      * @return the entities passes in as a mutable set.
      */
     default <T> Set<T> mSetOf(T... entities) {
-        return mSetOf(Set.of(entities));
+        return new HashSet<>(Set.of(entities));
     }
 
     /**

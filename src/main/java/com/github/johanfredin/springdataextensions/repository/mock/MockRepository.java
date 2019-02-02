@@ -127,7 +127,7 @@ public abstract class MockRepository<ID, T extends Identifiable<ID>> implements 
 
     @Override
     public void deleteAll(Iterable<? extends T> entities) {
-        var list = (List<T>) entities;
+        List<T> list = (List<T>) entities;
         this.entities.entrySet().removeIf(k -> list.contains(k.getValue()));
     }
 

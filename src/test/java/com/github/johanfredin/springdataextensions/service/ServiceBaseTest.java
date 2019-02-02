@@ -21,10 +21,7 @@ import com.github.johanfredin.springdataextensions.repository.BaseRepository;
 import org.junit.Test;
 import org.mockito.Mock;
 
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.List;
-import java.util.Optional;
+import java.util.*;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
@@ -157,7 +154,7 @@ public abstract class ServiceBaseTest<ID, T extends Identifiable<ID>,
     @Test
     public void testFindAllById() {
         Iterable<T> result = getEntities().subList(0, 1);
-        Iterable<ID> ids = List.of(getId());
+        Iterable<ID> ids = Arrays.asList(getId());
         when(getMockRepository().findAllById(ids)).thenReturn(result);
         Iterable<T> allById = getService().findAllById(ids);
         assertEquals("Size=1", 1, new ArrayList<T>((Collection<? extends T>) allById).size());

@@ -10,7 +10,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
 
 import static junit.framework.TestCase.assertFalse;
 import static org.springframework.test.util.AssertionErrors.assertTrue;
@@ -39,9 +39,9 @@ public class PersonRepositoryIntegrationTest extends ExtendedBaseRepositoryTest<
 
     @Override
     public void testCascadePersist() {
-        var p = getEntity1();
-        p.setPets(new ArrayList<>(List.of(new Pet("Fido"))));
-        var fido = p.getPets().get(0);
+        Person p = getEntity1();
+        p.setPets(new ArrayList<>(Arrays.asList(new Pet("Fido"))));
+        Pet fido = p.getPets().get(0);
         assertFalse("Fido not persisted", fido.isPersistedEntity());
 
         getRepository().save(p);
@@ -50,9 +50,9 @@ public class PersonRepositoryIntegrationTest extends ExtendedBaseRepositoryTest<
 
     @Override
     public void testCascadeDelete() {
-        var p = getEntity1();
-        p.setPets(new ArrayList<>(List.of(new Pet("Fido"))));
-        var fido = p.getPets().get(0);
+        Person p = getEntity1();
+        p.setPets(new ArrayList<>(Arrays.asList(new Pet("Fido"))));
+        Pet fido = p.getPets().get(0);
         getRepository().save(p);
         assertTrue("Fido persisted", fido.isPersistedEntity());
 

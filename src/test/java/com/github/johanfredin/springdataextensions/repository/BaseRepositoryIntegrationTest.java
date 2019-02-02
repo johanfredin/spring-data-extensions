@@ -21,6 +21,7 @@ import com.github.johanfredin.springdataextensions.util.RepositoryUtil;
 import org.junit.After;
 import org.junit.Test;
 
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.List;
 
@@ -141,12 +142,12 @@ public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<I
         T t1 = entities.get(0);
         T t2 = entities.get(1);
 
-        List<T> allById = (List<T>) getRepository().findAllById(List.of(t1.getId()));
+        List<T> allById = (List<T>) getRepository().findAllById(Arrays.asList(t1.getId()));
         assertEquals("findAllById() with id=" + t1.getId() + " should result in 1 match of type=" + entityName(),
                 1,
                 allById.size());
 
-        allById = (List<T>) getRepository().findAllById(List.of(t1.getId(), t2.getId()));
+        allById = (List<T>) getRepository().findAllById(Arrays.asList(t1.getId(), t2.getId()));
         assertEquals("findAllById() with ids=" + RepositoryUtil.getIdsForEntity(entities) +
                         " should result in 2 matches of type=" + entityName(),
                 2, allById.size());
@@ -188,7 +189,7 @@ public abstract class BaseRepositoryIntegrationTest<ID, T extends Identifiable<I
         assertEquals("There should be two entities of type=" + entityName() + " in DB", 2, getRepository().count());
         T t1 = entities.get(0);
         T t2 = entities.get(1);
-        getRepository().deleteAll(List.of(t1, t2));
+        getRepository().deleteAll(Arrays.asList(t1, t2));
         assertEquals("After deleting t1 there should be 0 entities left of type=" + entityName(), 0, getRepository().count());
     }
 

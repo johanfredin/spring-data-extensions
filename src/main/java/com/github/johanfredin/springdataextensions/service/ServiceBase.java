@@ -75,12 +75,14 @@ public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepos
         return getRepository().findById(id);
     }
 
+    /**
+     * Same as {@link #findById(Object)} but returns an instance of T and not an {@link Optional}.
+     * @param id the identifier of the entity to find
+     * @return the entity with given id
+     * @throws IllegalStateException if not entity found with that id.
+     */
     default T getEntityById(@NotNull ID id) {
-        Optional<T> optionalT = findById(id);
-        if(optionalT.isEmpty()) {
-            return null;
-        }
-        return optionalT.get();
+        return findById(id).orElseThrow(IllegalStateException::new);
     }
 
     /**

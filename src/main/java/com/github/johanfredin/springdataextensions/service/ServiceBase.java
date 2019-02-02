@@ -33,6 +33,7 @@ import java.util.Optional;
  * All the default methods have the same name and will by default call
  * the corresponding repository method.<br/>
  * e.g Service.save(T type) will call {@link #getRepository()#save(Identifiable)}.
+ *
  * @param <ID> any {@link Object} that is used as the primary id for the {@link Identifiable} type this service is working with
  * @param <T>  Any JPA entity extending {@link Identifiable}
  * @param <R>  Any class extending {@link BaseRepository}
@@ -77,6 +78,7 @@ public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepos
 
     /**
      * Same as {@link #findById(Object)} but returns an instance of T and not an {@link Optional}.
+     *
      * @param id the identifier of the entity to find
      * @return the entity with given id
      * @throws IllegalStateException if not entity found with that id.
@@ -156,7 +158,6 @@ public interface ServiceBase<ID, T extends Identifiable<ID>, R extends BaseRepos
     default void deleteAll() {
         getRepository().deleteAll();
     }
-
 
 
 }

@@ -111,6 +111,17 @@ public abstract class ServiceBaseTest<ID, T extends Identifiable<ID>,
     }
 
     /**
+     * Test {@link ServiceBaseTest#testGetEntityById()} and expect an exception.
+     */
+    @Test(expected = IllegalStateException.class)
+    public void test_getEntity_ExpectException() {
+        ID id = getId();
+        when(getMockRepository().findById(id)).thenThrow(IllegalStateException.class);
+        T t = getService().getEntityById(id);
+        verify(getMockRepository()).findById(id);
+    }
+
+    /**
      * Test {@link ServiceBase#getEntityById(Object)}
      */
     @Test
